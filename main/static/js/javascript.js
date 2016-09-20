@@ -6,8 +6,7 @@ $(document).ready(function(){
 			$.getJSON('/check_code', {
 		      text :  $('textarea#code_textarea').val()
 		    }, function(data) {
-		    	console.log("hi");
-		      //$('#append_text').replaceWith(text);
+		    	$('#append_text').replaceWith(data);
 		    });
 		    return false;
 		  };
