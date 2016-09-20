@@ -6,8 +6,8 @@ $(document).ready(function(){
 			$.getJSON('/check_code', {
 		      text :  $('textarea#txt').val()
 		    }, function(data) {
-		    	appendGutter();
-		    	$('#append_text').append("<h1>" + data + "</h1>");
+		    	current_text = appendGutter(data);
+		    	$('#append_text').append("<h1>" + current_text + "</h1>");
 		    	return false;
 		    });
 		    
@@ -17,10 +17,14 @@ $(document).ready(function(){
 
 
 //Track number of rows. The number of the current row would be used to append to certain element.
-function appendGutter() {
-	var textArea = document.getElementById("txt");
-	var arrayOfLines = textArea.value.split("\n"); 
-    var line_number = textArea.value.substr(0, textArea.selectionStart).split("\n").length;
-    console.log(arrayOfLines[line_number-2]);
-    console.log(line_number);
+function appendGutter(data) {
+	var textArea = data;
+	var arrayOfLines = textArea.split("\n"); 
+    var line_number = textArea.substr(0, textArea.selectionStart).split("\n").length;
+    if (line_number==1){
+    	var current_text = arrayOfLines[0];
+    } else {
+    	var current_text = arrayOfLines[line_number-1];
+    }
+    return current_text
 }
