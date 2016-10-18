@@ -45,11 +45,11 @@ def check_code():
     
     pylint_list = pylint_output.content
 
-    for l in pylint_list:
-        print l
+    #for l in pylint_list:
+        #print l
 
-    errors = "\n".join(pylint_list)
+    #errors = "\n".join(pylint_list)
 
-    return jsonify(errors)
+    return jsonify(pylint_list)
     
 

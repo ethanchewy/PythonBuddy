@@ -8,7 +8,8 @@ $(document).ready(function(){
 		    }, function(data) {
 		    	console.log(data);
 		    	current_text = data;
-		    	$('#append_text').append("<h1>" + current_text + "</h1>");
+		    	set_to_table(current_text);
+		    	//document.getElementById('append_text').innerHTML="<h1>" + current_text + "</h1>";
 		    	return false;
 		    });
 		    
@@ -32,4 +33,16 @@ function appendGutter(data) {
     }
     return current_text
     */
+}
+
+function set_to_table(errors){
+	//Split errors individually by line => list
+	//var tokens = errors.split(/\r?\n/);
+	console.log(errors.length);
+	
+	for(var x = 2; x < errors.length; x+=2){
+	   console.log(x+" "+errors[x]);
+	   $('#errorslist').append("<tr>"+"<td>" + errors[x] + "</td>"+"</tr>");
+	}
+	
 }
