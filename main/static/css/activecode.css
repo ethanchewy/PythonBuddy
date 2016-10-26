@@ -1,0 +1,109 @@
+.modal-profile {
+	display:none;
+    min-height: 300px;
+    overflow: hidden;
+	width: 700px;
+	padding:25px;
+	border:1px solid #fff;
+	box-shadow: 0px 2px 7px #292929;
+	-moz-box-shadow: 0px 2px 7px #292929;
+	-webkit-box-shadow: 0px 2px 7px #292929;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background: #f2f2f2;
+	z-index:50;
+}
+
+.modal-lightsout {
+	display:none;
+    position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:25;
+	background:#000 ;
+}
+
+.modal-close-profile {
+	display:none;
+	position:absolute;
+    height: 43px;
+	width: 43px;
+    background-image: url('close.png');
+	top:1px;
+	right:0.5px;
+}
+
+
+.ac_actions{
+	text-align: center;
+}
+
+.ac_sep {
+	background: #000;
+	display: inline-block;
+	margin: -15px 10px;
+	width: 1px;
+	height: 35px;
+	padding: 0;
+	border: 0;
+}
+.ac_section{
+	position: relative;
+	clear:both;
+}
+.ac_section>* {
+	max-width: 500pt;
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+}
+.ac_section .clearfix{
+	position: initial;
+}
+.ac_output{
+	display:none;
+	max-width: 450px;
+}
+
+.ac_caption {
+    text-align: center;
+    font-weight: bold;
+}
+
+.ac_caption_text {
+    font-weight: normal;
+}
+.ac_caption:before {
+    content: "ActiveCode: " counter(activecode) " ";
+    counter-increment: activecode;
+}
+
+.active_out {
+    background-color:#dcdcdc;
+    border-radius: 6px;
+    min-width: 20em;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.visible-ac-canvas {
+    border: 2px solid black;
+}
+
+.ac_section>.col-md-12 {
+	max-width: 100% !important;
+}
+
+.full_width ol {
+	max-width: 100% !important;
+}
+
+.ac-disabled {
+	pointer-events: none;
+}
+
+.ac-feedback {
+	border: 1px solid black;
+}

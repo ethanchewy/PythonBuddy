@@ -85,7 +85,25 @@ def check_code():
     #print text_json
     #print "text_json_2"
     #text_2 = api.check(text,"test.py")
+    ''
+    class WritableObject:
+        def __init__(self):
+            self.content = []
+        def write(self, string):
+            self.content.append(string)
     
+    
+    args = ["-r", "n", "--disable=R,C", "error_test.py"]
+    pylint_output = WritableObject()
+    lint.Run(args, reporter=ParseableTextReporter(pylint_output), exit=False)
+    '''
+    #print pylint_output.content
+    #pylint_list = pylint_output.content
+
+    #for l in pylint_list:
+        #print l
+
+    #errors = "\n".join(pylint_list)
 
     #return jsonify(text_2)
     (pylint_stdout, pylint_stderr) = lint.py_run("error_test.py",return_std= True,stdout="results.txt",stderr="results2.txt")
