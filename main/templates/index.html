@@ -24,24 +24,28 @@
 </head>
 <body>
 <!--<textarea data-lang="python" id="txt">print "hello world"</textarea>-->
-<textarea id="txt">
+<br>
+<div class="container">
+    <textarea id="txt">
 methods = []                       
 for i in range(10):                        
     methods.append(lambda x: x + i)        
 
 print methods[0](10)
-</textarea>
-<div id="lineNo"></div>
-<div id="length">
+    </textarea>
+    <br>
     <div id="append_text">
         <table id="errorslist" style="display: inline-block;">
             <tr>
-                <th>Name</th>
-                <th>Description</th>
+                <th>Line</th>
+                <th>Severity</th>
+                <th>Error</th>
+                <th>More Info</th>
             </tr>
         </table>
     </div>
 </div>
+    
 <div class="tracker"></div>
 
 

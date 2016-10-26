@@ -1,22 +1,11 @@
-//jQuery all client side
-$(document).ready(function(){
-	/*
-	function check(errors){
-		//Split errors individually by line => list
-		//var tokens = errors.split(/\r?\n/);
-		document.getElementById('errorslist').innerHTML = '';
-	   	$('#errorslist').append("<tr>"+"<th>Name</th>"+"<th>Description</th>"+
-	        "</tr>");
-		for(var x = 2; x < errors.length; x+=2){
-		   console.log(x+" "+errors[x]);
-		   $('#errorslist').append("<tr>"+"<td>" + errors[x] + "</td>"+"</tr>");
-		}
-		
-	}
-	*/
+//Created by Ethan Chiu 10/25/16
 
+$(document).ready(function(){
+	//Pulls info from AJAX call and sends it off to codemirror's update linting
+	//Has callback result_cb
 	function check_syntax(code, result_cb)
 	{	
+		//Example error for guideline
 		var error_list = [{
             line_no: null,
             column_no_start: null,
@@ -25,30 +14,34 @@ $(document).ready(function(){
             message: null,
             severity: null
         }];
-        console.log(error_list);
-        //var error_list =[];
         
-		//Add to html the errors
+		//Push and replace errors
 		function check(errors){
 			//Split errors individually by line => list
 			//var tokens = errors.split(/\r?\n/);
 			var number,message, severity;
 			//Regex for fetching number
 			
-
+			//Clear array.
+		    error_list = [{
+	            line_no: null,
+	            column_no_start: null,
+	            column_no_stop: null,
+	            fragment: null,
+	            message: null,
+	            severity: null
+	        }];
 			//console.log(errors);
 			document.getElementById('errorslist').innerHTML = '';
-		   	$('#errorslist').append("<tr>"+"<th>Name</th>"+"<th>Description</th>"+
-		        "</tr>");
+		   	$('#errorslist').append("<tr>"+"<th>Line</th>"+"<th>Severity</th>"+
+		   		"<th>Error</th>"+ "<th>More Info</th>"+"</tr>");
+
 			for(var x = 2; x < errors.length; x+=2){
-			   console.log(errors[x]);
-			   $('#errorslist').append("<tr>"+"<td>" + errors[x] + "</td>"+"</tr>");
+
 				//Sorting into line_no, etc.
 				var match_number = errors[x].match(/\d+/);
-				//console.log(parseInt(match_number[0], 10));
 				number = parseInt(match_number[0], 10);
 				severity = errors[x].charAt(0);
-				//console.log(severity);
 				//Split code based on colon
 				var message_split = errors[x].split(':');
 				console.log(message_split);
@@ -63,8 +56,7 @@ $(document).ready(function(){
 					console.log("error");
 					severity="warning";
 				}
-				//Push to error list
-				
+				//Push to error list		
 				error_list.push({
 					line_no: number, 
 					column_no_start: null,
@@ -73,17 +65,15 @@ $(document).ready(function(){
 					message: message, 
 					severity: severity
 				});
+
+				//Appending to Table
+				var moreinfo = null;
+			   	$('#errorslist').append("<tr>"+"<td>" + number + "</td>"
+			   		+"<td>" + severity + "</td>"
+			   		+"<td>" + message + "</td>"
+			   		+"<td>" + moreinfo + "</td>"+"</tr>");
 				
-				/*Test
-				error_list.push({
-		            line_no: 1,
-		            column_no_start: 14,
-		            column_no_stop: 17,
-		            fragment: "def doesNothing:\n",
-		            message: "invalid syntax",
-		            severity: "error"
-		        });
-		        */
+
 			}
 			
 			console.log("error_list"+error_list.toString());
@@ -94,16 +84,11 @@ $(document).ready(function(){
 		$.getJSON('/check_code', {
 	      text :  code
 	    }, function(data) {
-	    	//console.log(data);
 	    	current_text = data;
+	    	//Check Text
 	    	check(current_text);
-	    	//document.getElementById('append_text').innerHTML="<h1>" + current_text + "</h1>";
 	    	return false;
 	    });
-
-	    
-		//console.log("error_list"+error_list.toString());
-	    //result_cb(error_list);
 	}
 
 	var editor = CodeMirror.fromTextArea(document.getElementById("txt"), {
@@ -121,19 +106,6 @@ $(document).ready(function(){
 	        "check_cb":check_syntax
 	    },
     });
-    /*
-	editor.on("change", function(editor, change){
-		$.getJSON('/check_code', {
-	      text :  editor.getValue()
-	    }, function(data) {
-	    	console.log(data);
-	    	current_text = data;
-	    	check(current_text);
-	    	//document.getElementById('append_text').innerHTML="<h1>" + current_text + "</h1>";
-	    	return false;
-	    });
-	});
-	*/
 	
 
 });
