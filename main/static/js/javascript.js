@@ -114,6 +114,7 @@ $(document).ready(function(){
         indentUnit: 4,
         matchBrackets: true,
         lint:true,
+        styleActiveLine:true,
         gutters: ["CodeMirror-lint-markers"],
         lintWith: {
 	        "getAnnotations": CodeMirror.remoteValidator,
@@ -121,6 +122,61 @@ $(document).ready(function(){
 	        "check_cb":check_syntax
 	    },
     });
+
+    //Skulpt Config
+	function outf(text) { 
+	    var mypre = document.getElementById("output"); 
+	    mypre.innerHTML = mypre.innerHTML + text; 
+	} 
+	function builtinRead(x) {
+	    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+	            throw "File not found: '" + x + "'";
+	    return Sk.builtinFiles["files"][x];
+	}
+	// Here's everything you need to run a python program in skulpt
+	// grab the code from your textarea
+	// get a reference to your pre element for output
+	// configure the output function
+	// call Sk.importMainWithBody()
+	$( "#run" ).click(function() {
+		console.log("sfd");
+	   var prog = editor.getValue(); 
+	   console.log(prog);
+	   var mypre = document.getElementById("output"); 
+	   mypre.innerHTML = ''; 
+	   Sk.pre = "output";
+	   Sk.configure({output:outf, read:builtinRead}); 
+	   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+	   var myPromise = Sk.misceval.asyncToPromise(function() {
+	       return Sk.importMainWithBody("<stdin>", false, prog, true);
+	   });
+	   myPromise.then(function(mod) {
+	       console.log('success');
+	   },
+	       function(err) {
+	       console.log(err.toString());
+	       mypre.innerHTML = err.toString() 
+	   });
+	}); 
+
+	//Example Code, based on Skulpt website
+	var exampleCode = function (id, text) {
+        $(id).click(function (e) {
+        	console.log("sdf");
+            editor.setValue(text);
+            editor.focus(); // so that F5 works, hmm
+        });
+    };
+
+    exampleCode('#codeexample1', "methods = []\nfor i in range(10):\n    methodds.append(lambda x: x + i)\nprint methods[0](10)");
+    exampleCode('#codeexample2', "for i in range(5):\n    print i\n");
+    exampleCode('#codeexample3', "print [x*x for x in range(20) if x % 2 == 0]");
+    exampleCode('#codeexample4', "print 45**123");
+    exampleCode('#codeexample5', "print \"%s:%r:%d:%x\\n%#-+37.34o\" % (\n        \"dog\",\n        \"cat\",\n        23456,\n        999999999999L,\n        0123456702345670123456701234567L)");
+    exampleCode('#codeexample6', "def genr(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1\n\nprint list(genr(12))\n");
+    exampleCode('#codeexample7', "# obscure C3 MRO example from Python docs\nclass O(object): pass\nclass A(O): pass\nclass B(O): pass\nclass C(O): pass\nclass D(O): pass\nclass E(O): pass\nclass K1(A,B,C): pass\nclass K2(D,B,E): pass\nclass K3(D,A): pass\nclass Z(K1,K2,K3): pass\nprint Z.__mro__\n");
+    exampleCode('#codeexample8', "import document\n\npre = document.getElementById('edoutput')\npre.innerHTML = '''\n<h1> Skulpt can also access DOM! </h1>\n''' \n");
+
 	
 
 });
