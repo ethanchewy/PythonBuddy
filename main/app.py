@@ -36,7 +36,7 @@ def check_code():
     #Remember that you can configure with a seperate file for more specific limitations => --rcfile=/path/to/config.file . 
     #See http://stackoverflow.com/a/10138997/4698963
     #Add "--disable=R,C" to ARGs to print only errors & warnings
-    ARGS = ["-r","n", "--disable=R,C"]
+    ARGS = ["-r","n", "--disable=R,C","--msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg}"]
 
     pylint_output = WritableObject()
 
@@ -50,5 +50,10 @@ def check_code():
 
     #Return json object, which is the pylint_output seperated by each newline
     return jsonify(pylint_list)
+'''
+@app.route('/get_help')
+def help_code():
+'''
+
     
 
