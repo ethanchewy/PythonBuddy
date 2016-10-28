@@ -1,6 +1,7 @@
 # PythonBuddy
 Pylint Online + Skulpt. Made for python beginners and python educators.
 Demo: <a href="http://17chiue.pythonanywhere.com/">http://17chiue.pythonanywhere.com/</a>
+![](ScreenshotPythonBuddy.gif)
 ###Usage
 1) Fetch from repo:
   ```
