@@ -1,7 +1,6 @@
-def genr(n):
-    i = 0
-    while i < n:
-        yield i
-        i += 1
+methods = []                       
+for i in range(10):                        
+    methodds.append(lambda x: x + i)        
 
-print list(genr(12))
+print methods[0](10)
+    
