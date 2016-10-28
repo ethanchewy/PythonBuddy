@@ -1,6 +1,6 @@
 # PythonBuddy
-Pylint Online + Skulpt. Made for python beginners and python educators.
-Demo: <a href="http://17chiue.pythonanywhere.com/">http://17chiue.pythonanywhere.com/</a>
+Online Python Programming with Live Pylint syntax checking!
+<br>
 ![](ScreenshotPythonBuddy.gif)
 ###Usage
 1) Fetch from repo:
@@ -27,12 +27,14 @@ Demo: <a href="http://17chiue.pythonanywhere.com/">http://17chiue.pythonanywhere
   ```
   flask run
   ```
-###Customizability
+###Customize
+
 ###Current Features:
 <ul>
   <li>Live Syntax Checking
     <ul>
       <li>Uses Pylint as checker (only prints out errors and warnings)</li>
+      <li>Live Error Table with Additional Help Suggestions</li>
     </ul>
   </li>
   <li>Syntax Highlighting</li>
