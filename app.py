@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 from pylint import lint
 from astroid import MANAGER
 from pylint.reporters.text import TextReporter
-import subprocess
+from subprocess import Popen, PIPE, STDOUT
 
 
 app = Flask(__name__)
@@ -60,8 +60,11 @@ def help_code():
 
 def run_code():
     print "run_test"
-    results = subprocess.check_output(['python', 'error_test.py'])
-    return jsonify(results)
+    cmd = 'python error_test.py'
+    p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
+    output = p.stdout.read()
+
+    return jsonify(output)
 
     
 
