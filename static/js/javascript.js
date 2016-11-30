@@ -123,40 +123,21 @@ $(document).ready(function(){
 	    },
     });
 
-    //Skulpt Config
-	function outf(text) { 
-	    var mypre = document.getElementById("output"); 
-	    mypre.innerHTML = mypre.innerHTML + text; 
-	} 
-	function builtinRead(x) {
-	    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-	            throw "File not found: '" + x + "'";
-	    return Sk.builtinFiles["files"][x];
-	}
-	// Here's everything you need to run a python program in skulpt
-	// grab the code from your textarea
-	// get a reference to your pre element for output
-	// configure the output function
-	// call Sk.importMainWithBody()
+    //Actually Run in Python 
 	$( "#run" ).click(function() {
 		console.log("sfd");
-	   var prog = editor.getValue(); 
-	   console.log(prog);
-	   var mypre = document.getElementById("output"); 
-	   mypre.innerHTML = ''; 
-	   Sk.pre = "output";
-	   Sk.configure({output:outf, read:builtinRead}); 
-	   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
-	   var myPromise = Sk.misceval.asyncToPromise(function() {
-	       return Sk.importMainWithBody("<stdin>", false, prog, true);
-	   });
-	   myPromise.then(function(mod) {
-	       console.log('success');
-	   },
-	       function(err) {
-	       console.log(err.toString());
-	       mypre.innerHTML = err.toString() 
-	   });
+		//AJAX call to run python
+		$.getJSON('/run_code', {
+	      text :  editor.getValue()
+	    }, function(data) {
+	    	print_result(data);
+	    	return false;
+	    });
+	    
+	    function print_result(data){
+	    	document.getElementById('output').innerHTML = '';
+	    	$("#output").append("<pre>"+data+"</pre>");
+	    }
 	}); 
 
 	//Example Code, based on Skulpt website

@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, jsonify
 from pylint import lint
 from astroid import MANAGER
 from pylint.reporters.text import TextReporter
+from subprocess import Popen, PIPE, STDOUT
+
 
 app = Flask(__name__)
 app.debug = True 
@@ -54,6 +56,15 @@ def check_code():
 @app.route('/get_help')
 def help_code():
 '''
+@app.route('/run_code')
+
+def run_code():
+    print "run_test"
+    cmd = 'python error_test.py'
+    p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
+    output = p.stdout.read()
+
+    return jsonify(output)
 
     
 
