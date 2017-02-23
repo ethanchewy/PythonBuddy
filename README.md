@@ -64,7 +64,7 @@ Where's the code for embedding it in MOOCs? <br>
 I'm currently working on this over here (for edx specifically): https://github.com/ethanchewy/pybuddy2.0
 
 I want the code to actually compile and run in a certain way?
-If you want to actually execute the python look at my XBlock code: https://github.com/ethanchewy/pybuddy2.0 . Remember to sandbox the code with RestrictedPython or something.
+If you want to actually execute the python safely look at my XBlock code: https://github.com/ethanchewy/pybuddy2.0 . Remember to sandbox the code with RestrictedPython or something.
 
 ###Credits:
 This was made by Ethan Chiu as a research project under the guidance of Wellesley College professor Eni Mustafaraj.
