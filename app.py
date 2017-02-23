@@ -20,7 +20,7 @@ def check_code():
     text = request.args.get('text')
 
     #Open temp file which will be parsed
-    f = open("error_test.py","r+")
+    f = open("temp.py","r+")
     f.seek(0)
     f.write(text)
     f.truncate()
@@ -43,7 +43,7 @@ def check_code():
     pylint_output = WritableObject()
 
     #Run Pylint, textreporter will redirect to writable object
-    lint.Run(["error_test.py"]+ARGS, reporter=TextReporter(pylint_output), exit=False)
+    lint.Run(["temp.py"]+ARGS, reporter=TextReporter(pylint_output), exit=False)
     pylint_list = pylint_output.content
 
     #Clear Cache. VERY IMPORTANT! This will make sure that there's no funky issues. See: http://stackoverflow.com/questions/2028268/invoking-pylint-programmatically#comment5393474_4803466 
@@ -60,7 +60,7 @@ def help_code():
 
 def run_code():
     print "run_test"
-    cmd = 'python error_test.py'
+    cmd = 'python temp.py'
     p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
     output = p.stdout.read()
 
