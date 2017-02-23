@@ -1,7 +1,8 @@
-# PythonBuddy
-Online Python Programming with Live Pylint syntax checking!
-<br>
+# PythonBuddy 🖊️ 🐍 
+Online Python 2.7 Programming with Live Pylint Syntax Checking!
 ![](ScreenshotPythonBuddy.gif)
+<br>
+
 ###Usage
 1) Fetch from repo:
   ```
@@ -28,6 +29,9 @@ Online Python Programming with Live Pylint syntax checking!
   flask run
   ```
 ###Customize
+1) Fork github repo
+<br>
+2) Edit app.py to change any linting features
 
 ###Current Features:
 <ul>
@@ -38,9 +42,23 @@ Online Python Programming with Live Pylint syntax checking!
     </ul>
   </li>
   <li>Syntax Highlighting</li>
-  <li>Complilation</li>
+  <li>Python 2.7 Complilation</li>
+  <li>Search Within Code</li>
 </ul>
 
 ###Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform
 - Lower CPU usage
+
+###FAQ:
+Why did you make this? <br>
+I wanted to create an open source live python syntax checker to help beginning python programmers jump into python programming courses on MOOCs like edX without setting up a complicated python IDE. 
+
+Has anyone created anything like this before? <br>
+There has never been a live syntax checker for python online. Similar projects that are not "live" are http://pep8online.com/ and http://antares.sip.ucm.es/cesar/pylint/
+
+Has can I contribute? <br>
+You can fork my repo, push a pull request, and/or open issues!
+
+Where's the code for embedding it in MOOCs? <br>
+I'm currently working on this over here (for edx specifically): https://github.com/ethanchewy/pybuddy2.0
