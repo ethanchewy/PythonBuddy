@@ -29,10 +29,17 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   flask run
   ```
   Open your browser to [localhost:8000](http://localhost:8000) . Voila! 🎉
-###Customize
-1) Fork github repo
+###Customizing Options
+
+1. Edit app.py to change any pylint options
+2. Want Python 3? 
+ 1. Change step 2 from the installation instructions to: 
+    ```
+    virtualenv --python=/usr/bin/python3.2 venv
+    ```
+ 2. Follow rest of instructions
 <br>
-2) Edit app.py to change any linting features
+    
 
 ###Current Features:
 <ul>
