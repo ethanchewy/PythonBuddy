@@ -28,7 +28,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   ```
   flask run
   ```
-  Open your browser to [localhost:8000](http://localhost:8000) . Voila! 🎉
+  Open your browser to [localhost:5000](http://localhost:5000) . Voila! 🎉
 ###Customizing Options
 
 1. Edit app.py to change any pylint options
