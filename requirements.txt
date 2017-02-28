@@ -30,7 +30,6 @@ six==1.10.0
 SpoofMAC==2.1.1
 texttable==0.8.6
 Transcrypt==3.5.213
-vboxapi==1.0
 virtualenv==14.0.6
 wcwidth==0.1.7
 websocket-client==0.37.0
