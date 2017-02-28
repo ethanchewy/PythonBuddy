@@ -60,7 +60,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 
 ###FAQ:
 Why did you make this? <br>
-I wanted to create an open source live python syntax checker to help beginning python programmers jump into python programming courses on MOOCs like edX without setting up a complicated python IDE. 
+I made this so that MOOCs like edX or codecademy could easily embed and use this on their courses so students wouldn't have to go through the frustrations of setting up a Python environment and jump right into Python programming. Also, professors and teachers could easily set up a server and allow students to quickly test out their code with PythonBuddy online.
 
 Has anyone created anything like this before? <br>
 There has never been a live syntax checker for python online. Similar projects that are not "live" are http://pep8online.com/ and http://antares.sip.ucm.es/cesar/pylint/
