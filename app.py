@@ -66,5 +66,8 @@ def run_code():
 
     return jsonify(output)
 
+
+if __name__ == "__main__":
+    app.run()
     
 
