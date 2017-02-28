@@ -13,7 +13,6 @@ Flask==0.10.1
 itsdangerous==0.24
 Jinja2==2.8
 jmespath==0.9.0
-logilab-common==1.1.0
 MarkupSafe==0.23
 pathspec==0.3.4
 Paver==1.2.4
