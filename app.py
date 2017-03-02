@@ -4,7 +4,7 @@ from pylint import lint
 from astroid import MANAGER
 from pylint.reporters.text import TextReporter
 from subprocess import Popen, PIPE, STDOUT
-
+import fileinput
 
 app = Flask(__name__)
 app.debug = True 
@@ -20,11 +20,21 @@ def check_code():
     text = request.args.get('text')
 
     #Open temp file which will be parsed
+    '''
     f = open("temp.py","r+")
-    f.seek(0)
+    f.seek()
     f.write(text)
     f.truncate()
     f.close()
+    '''
+    with open("temp.py", "r") as in_file:
+        buf = in_file.readlines()
+    with open("temp.py", "w") as out_file:
+        for line in range(13):
+            out_file.write(buf[line])
+        out_file.write("\n")
+        for line in text:
+            out_file.write(line)
 
     #Writable Object that will be used as a TextReporter
     class WritableObject(object):
