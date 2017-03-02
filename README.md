@@ -33,18 +33,6 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   flask run
   ```
   Open your browser to [localhost:5000](http://localhost:5000) . Voila! 🎉
-###Customizing Options
-
-1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
-2. Want Python 3? 
- 1. Change step 2 from the installation instructions to: 
-    ```
-    virtualenv --python=/usr/bin/python3.2 venv
-    ```
- 2. Follow rest of instructions
-<br>
-    
-
 ###Current Features:
 <ul>
   <li>Live Syntax Checking
@@ -58,6 +46,17 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   <li>Basic Sandboxing</li>
   <li>Search Within Code</li>
 </ul>
+
+###Customizing Options
+
+1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
+2. Want Python 3? 
+ 1. Change step 2 from the installation instructions to: 
+    ```
+    virtualenv --python=/usr/bin/python3.2 venv
+    ```
+ 2. Follow rest of instructions
+<br>
 
 ###Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform
@@ -79,6 +78,9 @@ I'm currently working on this over here (for edx specifically): https://github.c
 
 I want the code to actually compile and run in a certain way?
 If you want to actually execute the python safely look at my XBlock code: https://github.com/ethanchewy/pybuddy2.0 . Remember to sandbox the code with RestrictedPython or something.
+
+How do I run my own server?
+https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki
 
 ###Credits:
 This was made by Ethan Chiu as a research project under the guidance of Wellesley College professor Eni Mustafaraj.
