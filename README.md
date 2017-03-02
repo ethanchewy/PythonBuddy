@@ -51,11 +51,13 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   </li>
   <li>Syntax Highlighting</li>
   <li>Python 2.7 Complilation</li>
+  <li>Basic Sandboxing</li>
   <li>Search Within Code</li>
 </ul>
 
 ###Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform
+- Stricter Python Sandboxing via Pypy's sandboxing solution
 - Lower CPU usage
 
 ###FAQ:
