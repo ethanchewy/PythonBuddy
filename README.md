@@ -8,9 +8,13 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   ```
   git clone https://github.com/ethanchewy/PythonBuddy.git
   ```
+2) Change to directory 
+  ```
+  cd OnlinePythonLinterSyntaxChecker
+  ```
 2) Create virtualenv based on your own system:
   ```
-  mkvirtualenv --python=/usr/bin/python2.7 venv
+  virtualenv -p /usr/bin/python2.7 venv
   ```
 3) Activate vitrual environment:
   ```
@@ -22,7 +26,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   ```
 5) Set FLASK_APP variable:
   ```
-  export FLASK_APP=app.py
+  export FLASK_APP = app.py
   ```
 6) Run flask app:
   ```
@@ -31,7 +35,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   Open your browser to [localhost:5000](http://localhost:5000) . Voila! 🎉
 ###Customizing Options
 
-1. Edit app.py to change any pylint options
+1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
 2. Want Python 3? 
  1. Change step 2 from the installation instructions to: 
     ```
