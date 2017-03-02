@@ -46,7 +46,7 @@ $(document).ready(function(){
 				var message_split = errors[x].split(':');
 				//console.log(message_split);
 
-				number = message_split[1];
+				number = message_split[1] - 14;
 
 				//Get severity after second colon
 				severity = message_split[2].charAt(2);
