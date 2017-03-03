@@ -11,5 +11,3 @@ sys.modules['subprocess']=None
 sys.modules['yaml']=None
 sys.modules['sys']=None
 #STOP
-
-    sdf
