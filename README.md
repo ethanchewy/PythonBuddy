@@ -64,6 +64,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 - Make easily embeddable for MOOCs like edX and other education platform
 - Stricter Python Sandboxing via Pypy's sandboxing solution
 - Lower CPU usage
+- Allow users to generate a link to a unique code snippet similar to JSBin
 
 ###FAQ:
 Why did you make this? <br>
