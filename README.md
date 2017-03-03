@@ -1,4 +1,6 @@
 # PythonBuddy 🖊️ 🐍 
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
+<br>
 Online Python 2.7 Programming with Live Pylint Syntax Checking!
 ![](ScreenshotPythonBuddy.gif)
 <br>
