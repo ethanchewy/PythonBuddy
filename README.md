@@ -3,7 +3,7 @@
 <br>
 Online Python 2.7 Programming with Live Pylint Syntax Checking!
 <br>
-![](58ba1d434e855737868349.gif)
+![](pybuddy.gif)
 <br>
 
 ###Usage
