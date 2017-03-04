@@ -2,7 +2,8 @@
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
 <br>
 Online Python 2.7 Programming with Live Pylint Syntax Checking!
-![](PythonBuddy.gif)
+<br>
+![](58ba1d434e855737868349.gif)
 <br>
 
 ###Usage
