@@ -37,18 +37,27 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   ```
   Open your browser to [localhost:5000](http://localhost:5000) . Voila! 🎉
 ###Current Features:
-<ul>
-  <li>Live Syntax Checking
-    <ul>
-      <li>Uses Pylint as checker (only prints out errors and warnings)</li>
-      <li>Live Error Table with Additional Help Suggestions</li>
-    </ul>
-  </li>
-  <li>Syntax Highlighting</li>
-  <li>Python 2.7 Complilation</li>
-  <li>Basic Sandboxing</li>
-  <li>Search Within Code</li>
-</ul>
+Live Syntax Checking
+<br>
+<li>Live Syntax Checking
+  <ul>
+    <li>Uses Pylint as checker (only prints out errors and warnings)</li>
+    <li>Syntax Highlighting</li>
+  </ul>
+</li>
+![](pybuddy2.gif)
+<br>
+<li>>Python 2.7 Execution
+  <ul>
+    <li>Python 2.7 Complilation</li>
+    <li>Basic Sandboxing</li>
+  </ul>
+</li>
+![](pybuddy3.gif)
+<br>
+<li>Live Error Table with Additional Help Suggestions</li>
+![](pybuddy4.gif)
+<br>
 
 ###Customizing Options
 
