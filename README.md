@@ -47,7 +47,7 @@ Live Syntax Checking
 </li>
 ![](pybuddy2.gif)
 <br>
-<li>>Python 2.7 Execution
+<li>Python 2.7 Execution
   <ul>
     <li>Python 2.7 Complilation</li>
     <li>Basic Sandboxing</li>
