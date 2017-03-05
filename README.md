@@ -9,7 +9,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 ###Usage
 1) Fetch from repo:
   ```
-  git clone https://github.com/ethanchewy/PythonBuddy.git
+  git clone https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker.git
   ```
 2) Change to directory 
   ```
@@ -29,7 +29,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   ```
 5) Set FLASK_APP variable:
   ```
-  export FLASK_APP = app.py
+  export FLASK_APP=app.py
   ```
 6) Run flask app:
   ```
