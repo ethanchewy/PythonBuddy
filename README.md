@@ -36,7 +36,6 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   flask run
   ```
   Open your browser to [localhost:5000](http://localhost:5000) . Voila! 🎉
-###Current Features:
 Live Syntax Checking
 <br>
 <li>Live Syntax Checking
@@ -68,7 +67,10 @@ Live Syntax Checking
     virtualenv --python=/usr/bin/python3.2 venv
     ```
  2. Follow rest of instructions
-3. To create a more secure Python Environment, check out the branch: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/tree/restrictedpython
+3. Security
+ 1. To create a much more secure Python Environment, consider using RestrictedPython: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/tree/restrictedpython
+ 2. For more security but enough flexibility, you could restrict the temp.py python file without read/write permissions via these instuctions: http://stackoverflow.com/questions/186202/what-is-the-best-way-to-open-a-file-for-exclusive-access-in-python
+###Current Features:
 <br>
 
 ###Future Goals:
