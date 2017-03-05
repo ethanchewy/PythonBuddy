@@ -1,16 +1,10 @@
-import sys
-sys.modules['os']=None
-sys.modules['os.path']=None
-sys.modules['pprint']=None
-sys.modules['builtins']=None
-sys.modules['shutil']=None
-sys.modules['subprocess']=None
-sys.modules['jinja2']=None
-sys.modules['subprocess']=None
-sys.modules['subprocess']=None
-sys.modules['yaml']=None
-sys.modules['sys']=None
-#STOP 
+from RestrictedPython import compile_restricted
+from RestrictedPython.PrintCollector import PrintCollector
+from RestrictedPython.Guards import safe_builtins
+restricted_globals = dict(__builtins__ = safe_builtins)
+#_print_ = PrintCollector
+
+result = printed
 
 print "hello world"
     

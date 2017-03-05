@@ -4,7 +4,9 @@ from pylint import lint
 from astroid import MANAGER
 from pylint.reporters.text import TextReporter
 from subprocess import Popen, PIPE, STDOUT
-import fileinput
+from RestrictedPython import compile_restricted_exec
+from RestrictedPython.PrintCollector import PrintCollector
+from RestrictedPython.Guards import safe_builtins
 
 app = Flask(__name__)
 app.debug = True 
@@ -30,7 +32,7 @@ def check_code():
     with open("temp.py", "r") as in_file:
         buf = in_file.readlines()
     with open("temp.py", "w") as out_file:
-        for line in range(13):
+        for line in range(7):
             out_file.write(buf[line])
         out_file.write("\n")
         for line in text:
@@ -69,12 +71,30 @@ def help_code():
 @app.route('/run_code')
 
 def run_code():
+    '''
+    OLD INSECURE CODE => MORE FREEDOM ON THE USER SIDE THOUGH
     print "run_test"
     cmd = 'python temp.py'
     p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
     output = p.stdout.read()
+    '''
+    with open('temp.py', 'r') as myfile:
+        text=myfile.read()
 
-    return jsonify(output)
+    code = compile_restricted_exec(text)
+
+    #exec(code)
+    #Get code object as stated: https://late.am/post/2012/03/26/exploring-python-code-objects.html
+
+    if code[0] is None:
+        print(code)
+        return jsonify(code[1])
+    else:
+        print(code[0].co_consts)
+        return jsonify(code[0].co_consts[6])
+        
+
+    return jsonify("Code Cannot be Run")
 
 
 if __name__ == "__main__":
