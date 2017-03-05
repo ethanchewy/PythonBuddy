@@ -68,6 +68,8 @@ Live Syntax Checking
     virtualenv --python=/usr/bin/python3.2 venv
     ```
  2. Follow rest of instructions
+3. To create a more secure Python Environment, check out the branch: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/tree/restrictedpython
+ 
 <br>
 
 ###Future Goals:
