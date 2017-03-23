@@ -4,9 +4,8 @@
 Online Python 2.7 Programming with Live Pylint Syntax Checking!
 <br>
 ![](pybuddy.gif)
-<br>
 
-###Usage
+### Usage
 1) Fetch from repo:
   ```
   git clone https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker.git
@@ -36,7 +35,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   flask run
   ```
   Open your browser to [localhost:5000](http://localhost:5000) . Voila! 🎉
-###Current Features:
+### Current Features:
 <br>
 <li>Live Syntax Checking
   <ul>
@@ -58,7 +57,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 ![](pybuddy4.gif)
 <br>
 
-###Customizing Options
+### Customizing Options
 
 1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
 2. Want Python 3? 
@@ -71,13 +70,13 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
  1. To create a much more secure Python Environment, consider using RestrictedPython: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/tree/restrictedpython
  2. For more security but enough flexibility, you could restrict the temp.py python file without read/write permissions via these instuctions: http://stackoverflow.com/questions/186202/what-is-the-best-way-to-open-a-file-for-exclusive-access-in-python
 
-###Future Goals:
+### Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform
 - Stricter Python Sandboxing via Pypy's sandboxing solution
 - Lower CPU usage
 - Allow users to generate a link to a unique code snippet similar to JSBin
 
-###FAQ:
+### FAQ:
 Why did you make this? <br>
 I made this so that MOOCs like edX or codecademy could easily embed and use this on their courses so students wouldn't have to go through the frustrations of setting up a Python environment and jump right into Python programming. Also, professors and teachers could easily set up a server and allow students to quickly test out their code with PythonBuddy online.
 
