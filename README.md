@@ -43,7 +43,9 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
     <li>Syntax Highlighting</li>
   </ul>
 </li>
+
 ![](pybuddy2.gif)
+
 <br>
 <li>Python 2.7 Execution
   <ul>
@@ -51,10 +53,14 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
     <li>Basic Sandboxing</li>
   </ul>
 </li>
+
 ![](pybuddy3.gif)
+
 <br>
 <li>Live Error Table with Additional Help Suggestions</li>
+
 ![](pybuddy4.gif)
+
 <br>
 
 ### Customizing Options
