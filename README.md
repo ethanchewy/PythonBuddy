@@ -78,6 +78,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 
 ### Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform
+- Create an analytics system that models the student's python learning and tells them where they need improvement (many programming students learn by copying and pasting and don't actually understand the nuances of the Python language).
 - Stricter Python Sandboxing via Pypy's sandboxing solution
 - Lower CPU usage
 - Allow users to generate a link to a unique code snippet similar to JSBin
