@@ -8,15 +8,15 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 ### Usage
 1) Fetch from repo:
   ```
-  git clone https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker.git
+  git clone https://github.com/ethanchewy/PythonBuddy.git
   ```
 2) Change to directory 
   ```
-  cd OnlinePythonLinterSyntaxChecker
+  cd PythonBuddy
   ```
 2) Create virtualenv based on your own system:
   ```
-  virtualenv -p /usr/bin/python2.7 venv
+  virtualenv venv
   ```
 3) Activate vitrual environment:
   ```
@@ -69,7 +69,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 2. Want Python 3? 
  1. Change step 2 from the installation instructions to: 
     ```
-    virtualenv --python=/usr/bin/python3.2 venv
+    virtualenv -p python3 venv
     ```
  2. Follow rest of instructions
 3. Security
