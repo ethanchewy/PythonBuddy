@@ -100,7 +100,7 @@ I'm currently working on this over here (for edx specifically): https://github.c
 ```
 
 I want the code to actually compile and run in a certain way?
-If you want to actually execute the python safely look at my XBlock code: https://github.com/ethanchewy/pybuddy2.0 . Remember to sandbox the code with RestrictedPython or something.
+If you want to actually execute the python safely look at my Restricted Python branch: https://github.com/ethanchewy/PythonBuddy/tree/restrictedpython . 
 
 How do I run my own server?
 https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki
