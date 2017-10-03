@@ -2,7 +2,7 @@ function getHelp(e){for(var n=[["E0401","Used when pylint has been unable to imp
 return"No information at the moment"}$(document).ready(function(){function e(e,n){function t(e){var t,i,a,o,r
 s=[{line_no:null,column_no_start:null,column_no_stop:null,fragment:null,message:null,severity:null}],document.getElementById("errorslist").innerHTML="",$("#errorslist").append("<tr><th>Line</th><th>Severity</th><th>Error</th><th>More Info</th></tr>")
 for(var h=2;h<e.length;h+=2){var d=e[h].split(":")
-t=d[1]-14,a=d[2].charAt(2),r=d[2].substring(2,7),d=d[2].split("]"),i=d[1],"E"==a?(console.log("error"),a="error",o="red"):"W"==a&&(console.log("error"),a="warning",o="yellow"),s.push({line_no:t,column_no_start:null,column_no_stop:null,fragment:null,message:i,severity:a})
+t=d[1],a=d[2].charAt(2),r=d[2].substring(2,7),d=d[2].split("]"),i=d[1],"E"==a?(console.log("error"),a="error",o="red"):"W"==a&&(console.log("error"),a="warning",o="yellow"),s.push({line_no:t,column_no_start:null,column_no_stop:null,fragment:null,message:i,severity:a})
 var c=getHelp(r)
 $("#errorslist").append("<tr><td>"+t+'</td><td style="background-color:'+o+';">'+a+"</td><td>"+i+"</td><td>"+c+"</td></tr>")}console.log("error_list"+s),n(s)}var s=[{line_no:null,column_no_start:null,column_no_stop:null,fragment:null,message:null,severity:null}]
 $.getJSON("/check_code",{text:e},function(e){return console.log(e),current_text=e,t(current_text),!1})}var n=CodeMirror.fromTextArea(document.getElementById("txt"),{mode:{name:"python",version:2,singleLineStringErrors:!1},lineNumbers:!0,indentUnit:4,matchBrackets:!0,lint:!0,styleActiveLine:!0,gutters:["CodeMirror-lint-markers"],lintWith:{getAnnotations:CodeMirror.remoteValidator,async:!0,check_cb:e}})
