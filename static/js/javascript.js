@@ -81,7 +81,7 @@ $(document).ready(function(){
 				//Get help message for each id
 				var moreinfo = getHelp(id);
 				//Append all data to table
-			   	$('#errorslist').append("<tr>"+"<td>" + number + "</td>"
+			   	$('#errorslist').append("<tr>"+"<td>" + -number + "</td>"
 			   		+"<td style=\"background-color:"+severity_color+";\"" + 
 			   		">" + severity + "</td>"
 			   		+"<td>" + message + "</td>"
