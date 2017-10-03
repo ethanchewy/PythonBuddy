@@ -3,9 +3,7 @@ from flask import Flask, render_template, request, jsonify
 from pylint import lint
 from astroid import MANAGER
 from pylint.reporters.text import TextReporter
-from subprocess import Popen, PIPE, STDOUT
 import fileinput
-from io import StringIO
 from tempfile import NamedTemporaryFile
 from RestrictedPython import compile_restricted
 from RestrictedPython import safe_builtins, utility_builtins, limited_builtins
