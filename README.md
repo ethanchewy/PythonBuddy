@@ -1,7 +1,7 @@
 # PythonBuddy 🖊️ 🐍 
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
 <br>
-Online Python 2.7 Programming with Live Pylint Syntax Checking!
+Online Python 2.7 Programming with Live Pylint Syntax Checking (Restricted version)
 <br>
 ![](pybuddy.gif)
 <br>
