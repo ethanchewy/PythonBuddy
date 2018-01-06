@@ -1,4 +1,4 @@
-//Created by Ethan Chiu 2016
+//Created by Ethan Chiu 2017
 
 $(document).ready(function(){
 	//Pulls info from AJAX call and sends it off to codemirror's update linting
@@ -139,14 +139,6 @@ $(document).ready(function(){
 	    	$("#output").append("<pre>"+data+"</pre>");
 	    }
 	}); 
-
-	//Example Code, based on Skulpt website
-	var exampleCode = function (id, text) {
-        $(id).click(function (e) {
-        	console.log("sdf");
-            editor.setValue(text);
-            editor.focus(); // so that F5 works, hmm
-        });
     };
 
     exampleCode('#codeexample1', "methods = []\nfor i in range(10):\n    methodds.append(lambda x: x + i)\nprint methods[0](10)");
