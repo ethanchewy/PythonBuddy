@@ -63,7 +63,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 
 <br>
 
-### Customizing Options
+### Customization Options
 
 1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
 2. Want Python 3? 
