@@ -36,6 +36,7 @@ $(document).ready(function(){
 		   	$('#errorslist').append("<tr>"+"<th>Line</th>"+"<th>Severity</th>"+
 		   		"<th>Error</th>"+ "<th>More Info</th>"+"</tr>");
 
+		   	console.log(errors)
 			for(var x = 2; x < errors.length; x+=2){
 
 				//Sorting into line_no, etc.
@@ -46,46 +47,51 @@ $(document).ready(function(){
 				var message_split = errors[x].split(':');
 				//console.log(message_split);
 
-				number = message_split[1] - 14;
+				number = message_split[1] - 14 + 6;
 
-				//Get severity after second colon
-				severity = message_split[2].charAt(2);
+				//temp fix
+				if(number>0)
+				{
+					//Get severity after second colon
+					severity = message_split[2].charAt(2);
 
-				//Get message id by splitting
-				id = message_split[2].substring(2,7);
+					//Get message id by splitting
+					id = message_split[2].substring(2,7);
 
-				//Split to get message
-				message_split = message_split[2].split("]");
-				message = message_split[1];
+					//Split to get message
+					message_split = message_split[2].split("]");
+					message = message_split[1];
 
-				//Set severity to necessary parameters
-				if(severity=="E"){
-					console.log("error");
-					severity="error";
-					severity_color="red";
-				} else if(severity=="W"){
-					console.log("error");
-					severity="warning";
-					severity_color="yellow";
+					//Set severity to necessary parameters
+					if(severity=="E"){
+						console.log("error");
+						severity="error";
+						severity_color="red";
+					} else if(severity=="W"){
+						console.log("error");
+						severity="warning";
+						severity_color="yellow";
+					}
+					//Push to error list		
+					error_list.push({
+						line_no: number, 
+						column_no_start: null,
+	            		column_no_stop: null,
+						fragment: null,
+						message: message, 
+						severity: severity
+					});
+
+					//Get help message for each id
+					var moreinfo = getHelp(id);
+					//Append all data to table
+				   	$('#errorslist').append("<tr>"+"<td>" + number + "</td>"
+				   		+"<td style=\"background-color:"+severity_color+";\"" + 
+				   		">" + severity + "</td>"
+				   		+"<td>" + message + "</td>"
+				   		+"<td>" + moreinfo + "</td>"+"</tr>");
 				}
-				//Push to error list		
-				error_list.push({
-					line_no: number, 
-					column_no_start: null,
-            		column_no_stop: null,
-					fragment: null,
-					message: message, 
-					severity: severity
-				});
 
-				//Get help message for each id
-				var moreinfo = getHelp(id);
-				//Append all data to table
-			   	$('#errorslist').append("<tr>"+"<td>" + number + "</td>"
-			   		+"<td style=\"background-color:"+severity_color+";\"" + 
-			   		">" + severity + "</td>"
-			   		+"<td>" + message + "</td>"
-			   		+"<td>" + moreinfo + "</td>"+"</tr>");
 				
 
 			}
