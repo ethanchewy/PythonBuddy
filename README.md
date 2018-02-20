@@ -99,8 +99,8 @@ I'm currently working on this over here (for edx specifically): https://github.c
 <iframe src="https://pythonbuddy.com"></iframe>
 ```
 
-I want the code to actually compile and run in a certain way?
-If you want to actually execute the python safely look at my Restricted Python branch: https://github.com/ethanchewy/PythonBuddy/tree/restrictedpython . 
+I want the code to actually compile and run in a certain way?<br>
+If you want to actually execute the python safely look at my Restricted Python branch: https://github.com/ethanchewy/PythonBuddy/tree/restrictedpython. If you want to run the code more quickly, check out the testing branch which uses Python 3 but may have some bugs: https://github.com/ethanchewy/PythonBuddy/tree/testing.
 
 How do I run my own server?
 https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki
