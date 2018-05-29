@@ -1,4 +1,4 @@
-//Created by Ethan Chiu 2017
+//Created by Ethan Chiu 2016
 
 $(document).ready(function(){
 	//Pulls info from AJAX call and sends it off to codemirror's update linting
@@ -36,6 +36,7 @@ $(document).ready(function(){
 		   	$('#errorslist').append("<tr>"+"<th>Line</th>"+"<th>Severity</th>"+
 		   		"<th>Error</th>"+ "<th>More Info</th>"+"</tr>");
 
+		   	//console.log(errors)
 			for(var x = 2; x < errors.length; x+=2){
 
 				//Sorting into line_no, etc.
@@ -46,51 +47,58 @@ $(document).ready(function(){
 				var message_split = errors[x].split(':');
 				//console.log(message_split);
 
-				number = message_split[1] - 14;
+				number = message_split[1] - 14 + 6;
 
-				//Get severity after second colon
-				severity = message_split[2].charAt(2);
+				//temp fix
+				if(number>0)
+				{
+					number = message_split[1] - 14;
 
-				//Get message id by splitting
-				id = message_split[2].substring(2,7);
+					//Get severity after second colon
+					severity = message_split[2].charAt(2);
 
-				//Split to get message
-				message_split = message_split[2].split("]");
-				message = message_split[1];
+					//Get message id by splitting
+					id = message_split[2].substring(2,7);
 
-				//Set severity to necessary parameters
-				if(severity=="E"){
-					console.log("error");
-					severity="error";
-					severity_color="red";
-				} else if(severity=="W"){
-					console.log("error");
-					severity="warning";
-					severity_color="yellow";
+					//Split to get message
+					message_split = message_split[2].split("]");
+					message = message_split[1];
+					
+					//Set severity to necessary parameters
+					if(severity=="E"){
+						//console.log("error");
+						severity="error";
+						severity_color="red";
+					} else if(severity=="W"){
+						//console.log("error");
+						severity="warning";
+						severity_color="yellow";
+					}
+					//Push to error list		
+					error_list.push({
+						line_no: number, 
+						column_no_start: null,
+	            		column_no_stop: null,
+						fragment: null,
+						message: message, 
+						severity: severity
+					});
+
+					//Get help message for each id
+					var moreinfo = getHelp(id);
+					//Append all data to table
+				   	$('#errorslist').append("<tr>"+"<td>" + number + "</td>"
+				   		+"<td style=\"background-color:"+severity_color+";\"" + 
+				   		">" + severity + "</td>"
+				   		+"<td>" + message + "</td>"
+				   		+"<td>" + moreinfo + "</td>"+"</tr>");
 				}
-				//Push to error list		
-				error_list.push({
-					line_no: number, 
-					column_no_start: null,
-            		column_no_stop: null,
-					fragment: null,
-					message: message, 
-					severity: severity
-				});
 
-				//Get help message for each id
-				var moreinfo = getHelp(id);
-				//Append all data to table
-			   	$('#errorslist').append("<tr>"+"<td>" + number + "</td>"
-			   		+"<td style=\"background-color:"+severity_color+";\"" + 
-			   		">" + severity + "</td>"
-			   		+"<td>" + message + "</td>"
-			   		+"<td>" + moreinfo + "</td>"+"</tr>");
 				
 
 			}
 			
-			console.log("error_list"+error_list.toString());
+			//console.log("error_list"+error_list.toString());
 	    	result_cb(error_list);
 
 		}
@@ -98,7 +106,7 @@ $(document).ready(function(){
 		$.getJSON('/check_code', {
 	      text :  code
 	    }, function(data) {
-	    	console.log(data);
+	    	//console.log(data);
 	    	current_text = data;
 	    	//Check Text
 	    	check(current_text);
@@ -125,7 +133,7 @@ $(document).ready(function(){
 
     //Actually Run in Python 
 	$( "#run" ).click(function() {
-		console.log("sfd");
+		//console.log("sfd");
 		//AJAX call to run python
 		$.getJSON('/run_code', {
 	      text :  editor.getValue()
@@ -139,7 +147,6 @@ $(document).ready(function(){
 	    	$("#output").append("<pre>"+data+"</pre>");
 	    }
 	}); 
-    };
 
     exampleCode('#codeexample1', "methods = []\nfor i in range(10):\n    methodds.append(lambda x: x + i)\nprint methods[0](10)");
     exampleCode('#codeexample2', "for i in range(5):\n    print i\n");
