@@ -3,7 +3,7 @@
 <br>
 Online Python 3.6 Programming with Live Pylint Syntax Checking!
 <br>
-![](pybuddy.gif)
+![](gifs/pybuddy.gif)
 
 ### Usage
 1) Fetch from repo:
@@ -44,7 +44,7 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   </ul>
 </li>
 
-![](pybuddy2.gif)
+![](gifs/pybuddy2.gif)
 
 <br>
 <li>Python Execution
@@ -54,12 +54,12 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   </ul>
 </li>
 
-![](pybuddy3.gif)
+![](gifs/pybuddy3.gif)
 
 <br>
 <li>Live Error Table with Additional Help Suggestions</li>
 
-![](pybuddy4.gif)
+![](gifs/pybuddy4.gif)
 
 <br>
 
