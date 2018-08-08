@@ -11,35 +11,13 @@ body{
 
 }
 
-/*
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-*/
-
-/*
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-*/
-
-/*
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-*/
-
 button{
     font-size: 20px !important;
 }
 a{
 	color:white;
 }
-a:hover{
+#run:hover{
 	-webkit-filter: grayscale(100%);
    -moz-filter: grayscale(100%);
    -ms-filter: grayscale(100%);

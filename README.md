@@ -1,7 +1,7 @@
-# PythonBuddy 🖊️ 🐍 
+# PythonBuddy 🖊️ 🐍
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
 <br>
-Online Python 2.7 Programming with Live Pylint Syntax Checking!
+Online Python 3.6 Programming with Live Pylint Syntax Checking!
 <br>
 ![](pybuddy.gif)
 
@@ -10,13 +10,13 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
   ```
   git clone https://github.com/ethanchewy/PythonBuddy.git
   ```
-2) Change to directory 
+2) Change to directory
   ```
   cd PythonBuddy
   ```
 2) Create virtualenv based on your own system:
   ```
-  virtualenv venv
+  python3 -m venv venv
   ```
 3) Activate vitrual environment:
   ```
@@ -47,9 +47,9 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 ![](pybuddy2.gif)
 
 <br>
-<li>Python 2.7 Execution
+<li>Python Execution
   <ul>
-    <li>Python 2.7 Complilation</li>
+    <li>Python Complilation</li>
     <li>Basic Sandboxing</li>
   </ul>
 </li>
@@ -66,15 +66,12 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 ### Customization Options
 
 1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
-2. Want Python 3? 
- 1. Change step 2 from the installation instructions to: 
-    ```
-    virtualenv -p python3 venv
-    ```
- 2. Follow rest of instructions
-3. Security
+2. Security
  1. To create a much more secure Python Environment, consider using RestrictedPython: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/tree/restrictedpython
  2. For more security but enough flexibility, you could restrict the temp.py python file without read/write permissions via these instuctions: http://stackoverflow.com/questions/186202/what-is-the-best-way-to-open-a-file-for-exclusive-access-in-python
+3. For versions that used Python 2 or to see older versions, check: https://github.com/ethanchewy/PythonBuddy/releases
+
+### Unit Tests
 
 ### Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform
@@ -82,6 +79,7 @@ Online Python 2.7 Programming with Live Pylint Syntax Checking!
 - Stricter Python Sandboxing via Pypy's sandboxing solution
 - Lower CPU usage
 - Allow users to generate a link to a unique code snippet similar to JSBin
+- Unit tests for client side JS
 
 ### FAQ:
 Why did you make this? <br>

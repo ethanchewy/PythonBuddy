@@ -20,6 +20,10 @@
     <script src="/static/codemirror/addon/search.js"></script>
     <script src="/static/codemirror/addon/searchcursor.js"></script>
     <script src="/static/codemirror/addon/dialog.js"></script>
+    <!-- Socket IO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <!-- Require.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
     <!--Style -->
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/static/codemirror/lib/codemirror.css">
@@ -29,14 +33,18 @@
 </head>
 
 <body>
-    <a href="https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+    <a href="https://github.com/ethanchewy/PythonBuddy"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     <div class="text-center" id="info">
         <h1>Python Linter Online</h1> <i>Live Syntax Checking Using Pylint while Running Python </i>
         <p> Examples: <a href="#" id="codeexample1">1</a> <a href="#" id="codeexample2">2</a> <a href="#" id="codeexample3">3</a> <a href="#" id="codeexample4">4</a> <a href="#" id="codeexample5">5</a> <a href="#" id="codeexample6">6</a> <a href="#" id="codeexample7">7</a> </p>
     </div>
     <br>
     <div class="container">
-        <textarea id="txt">print "hello world" </textarea>
+        <textarea id="txt">
+def foo(bar, baz):
+    pass
+foo(42)
+        </textarea>
         <br>
         <button type="button" id="run" class="btn btn-success">Run</button>
         <br>
@@ -50,7 +58,9 @@
                     <th>Line</th>
                     <th>Severity</th>
                     <th>Error</th>
-                    <th>More Info</th>
+                    <th>Tips</th>
+                    <th>Error Code</th>
+                    <th>Error Info</th>
                 </tr>
             </table>
         </div>

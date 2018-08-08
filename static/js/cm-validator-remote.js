@@ -8,48 +8,54 @@ CodeMirror.remoteValidator = function(cm, updateLinting, options) {
 		updateLinting(cm, []);
 		return;
 	}
-	
+
 	function result_cb(error_list)
 	{
 		var found = [];
-		
+
+		console.log(error_list);
 		for(var i in error_list)
 		{
 			var error = error_list[i];
-			
-			var start_line = error.line_no;
 
-            var start_char;
-            if(typeof(error.column_no_start) != "undefined")
-			    start_char = error.column_no_start;
-            else
-			    start_char = error.column_no;
+			// Null check to make sure eror message is not empty
+			if (error.line_no != null && error.message != null && error.severity != null) {
+				var start_line = error.line_no;
 
-			var end_char;
-            if(typeof(error.column_no_stop) != "undefined")
-    			end_char = error.column_no_stop;
-            else
-    			end_char = error.column_no;
+				var start_char;
+				if(typeof(error.column_no_start) != "undefined")
+						start_char = error.column_no_start;
+				else
+						start_char = error.column_no;
 
-			var end_line = error.line_no;
-			var message = error.message;
+				var end_char;
 
-            var severity;
-            if(typeof(error.severity) != "undefined")
-                severity = error.severity;
-            else
-                severity = 'error';
-			
-			found.push({
-				from: CodeMirror.Pos(start_line - 1, start_char),
-				to: CodeMirror.Pos(end_line - 1, end_char),
-				message: message,
-				severity: severity // "error", "warning"
-			});
+				if(typeof(error.column_no_stop) != "undefined")
+						end_char = error.column_no_stop;
+				else
+						end_char = error.column_no;
+
+				var end_line = error.line_no;
+				var message = error.message;
+
+				var severity;
+				if(typeof(error.severity) != "undefined") {
+						severity = error.severity;
+				} else {
+						severity = 'error';
+				}
+
+				found.push({
+					from: CodeMirror.Pos(start_line - 1, start_char),
+					to: CodeMirror.Pos(end_line - 1, end_char),
+					message: message,
+					severity: severity // "error", "warning"
+				});
+			}
 		}
 		
 		updateLinting(cm, found);
 	}
-	
+
 	options.check_cb(text, result_cb);
 };
