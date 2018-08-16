@@ -3,6 +3,10 @@
 <br>
 Online Python 3.6 Programming with Live Pylint Syntax Checking!
 <br>
+<i>
+Demo is in Python 2.7. A Full Python sandboxing implementation for the Python 3.6 version is a WIP.
+</i>
+<br>
 ![](gifs/pybuddy.gif)
 
 ### Usage
