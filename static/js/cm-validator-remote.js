@@ -13,7 +13,6 @@ CodeMirror.remoteValidator = function(cm, updateLinting, options) {
 	{
 		var found = [];
 
-		console.log(error_list);
 		for(var i in error_list)
 		{
 			var error = error_list[i];
@@ -53,7 +52,7 @@ CodeMirror.remoteValidator = function(cm, updateLinting, options) {
 				});
 			}
 		}
-		
+
 		updateLinting(cm, found);
 	}
 

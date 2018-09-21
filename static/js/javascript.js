@@ -85,7 +85,7 @@ $(document).ready(function(){
 
 		}
 		//AJAX call to pylint
-		$.getJSON('/check_code', {
+		$.post('/check_code', {
 	      text :  code
 	    }, function(data) {
 	    	current_text = data;
@@ -114,7 +114,7 @@ $(document).ready(function(){
 
     //Actually Run in Python
 	$( "#run" ).click(function() {
-		$.getJSON('/run_code', {
+		$.post('/run_code', {
 	      text :  editor.getValue()
 	    }, function(data) {
 	    	print_result(data);
@@ -125,7 +125,7 @@ $(document).ready(function(){
 	    	document.getElementById('output').innerHTML = '';
 	    	$("#output").append("<pre>"+data+"</pre>");
 	    }
-	});
+	}, "json");
 	var exampleCode = function (id, text) {
         $(id).click(function (e) {
             editor.setValue(text);

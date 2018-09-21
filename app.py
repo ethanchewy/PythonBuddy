@@ -34,7 +34,7 @@ def index():
     session["time_now"] = datetime.now()
     return render_template("index.html")
 
-@app.route('/check_code')
+@app.route('/check_code', methods=['POST'])
 def check_code():
     """Run pylint on code and get output
         :return: JSON object of pylint errors
@@ -53,7 +53,7 @@ def check_code():
         https://github.com/PyCQA/pylint/blob/master/pylint/lint.py
     """
     #Get textarea text from AJAX call
-    text = request.args.get('text')
+    text = request.form['text']
 
     # Session to handle multiple users at one time
     session["code"] = text
