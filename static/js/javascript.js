@@ -92,7 +92,7 @@ $(document).ready(function(){
 	    	//Check Text
 	    	check(current_text);
 	    	return false;
-	    });
+	    }, 'json');
 	}
 
 	var editor = CodeMirror.fromTextArea(document.getElementById("txt"), {
