@@ -64,7 +64,7 @@ def check_code():
     return jsonify(output)
 
 # Run python in secure system
-@app.route('/run_code')
+@app.route('/run_code', methods=['POST'])
 def run_code():
     """Run python 3 code
         :return: JSON object of python 3 output

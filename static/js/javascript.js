@@ -114,18 +114,18 @@ $(document).ready(function(){
 
     //Actually Run in Python
 	$( "#run" ).click(function() {
-		$.post('/run_code', {
+	    $.post('/run_code', {
 	      text :  editor.getValue()
 	    }, function(data) {
 	    	print_result(data);
 	    	return false;
-	    });
+	    }, 'json');
 
 	    function print_result(data){
 	    	document.getElementById('output').innerHTML = '';
 	    	$("#output").append("<pre>"+data+"</pre>");
 	    }
-	}, "json");
+	});
 	var exampleCode = function (id, text) {
         $(id).click(function (e) {
             editor.setValue(text);
