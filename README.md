@@ -67,6 +67,16 @@ Demo is in Python 2.7. A Full Python sandboxing implementation for the Python 3.
 
 <br>
 
+### Secure (Sandboxed) Version using Docker
+Please check out [PythonBuddySandboxed](https://github.com/ethanchewy/PythonBuddySandboxed) for a fully working web implementation which uses a dockerized version of PythonBuddy called [PythonBuddySandbox](https://github.com/christophetd/docker-python-sandbox). 
+
+This builds off of christophetd's [docker-python-sandbox](https://github.com/christophetd/docker-python-sandbox) and just modifies it so that it runs pylint in the background and processes the pylint messages on the client side.
+
+To see how he implements it on the web side, please check out [https://github.com/christophetd/code-execution-api-demo](https://github.com/christophetd/code-execution-api-demo) 
+
+This is still in alpha stage so there might be some bugs. If you want to implement this please check the 4 links above since documentation is a WIP.
+
+
 ### Customization Options
 
 1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
