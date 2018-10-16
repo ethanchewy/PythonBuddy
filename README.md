@@ -1,5 +1,6 @@
 # PythonBuddy 🖊️ 🐍
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](http://paypal.me/Ethan302)
 <br>
 Online Python 3.6 Programming with Live Pylint Syntax Checking!
 <br>
@@ -122,3 +123,20 @@ Featured on <a href = "https://twitter.com/PythonWeekly/status/83992898438945177
 
 ### Credits:
 This was made by Ethan Chiu as a research project under the guidance of Wellesley College professor Eni Mustafaraj.
+
+### Donations:
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](http://paypal.me/Ethan302)
+
+I started working on this in 2016 after seeing no one had addressed the issue of reducing the high attrition rate of beginning Python programmers due to the difficulties of setting up their programming environment. 
+
+So, ever since then, I've always been trying to improve PythonBuddy such as security and scalabitliy. Thus, I have dedicated as much as my free time into this project. 
+
+Since 2016, it's cost more than $250 per year to run and deploy the demo site excluding development costs. 
+
+Before college, I've been able to save money from various jobs. Now that I am in college, I have to pay a hefty tuition, housing, food, etc so it's much harder to sustain PythonBuddy even with a part-time job. 
+
+My goal is to keep the demo site PythonBuddy running since more than 4,000 users use it daily. All donations will go towards PythonBuddy and any excess will be used to increase the specs of the PythonBuddy demo server. 
+
+Any donation would be greatly appreciated
+
+<b> No donation is too small. </b> A dollar goes a long way :)
