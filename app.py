@@ -158,7 +158,9 @@ def process_error(error):
     if error.find("Your code has been rated at") > -1:
         return None
 
-    line_num = error.split(":")[1]
+    # Linux would return error message with line number on position [1] 
+    # and windows place line number on position [2]
+    line_num = error.split(":")[1] if error.split(":")[1].isnumeric() else error.split(":")[2] 
 
     # list_words.pop(0)
     error_yet = False
