@@ -1,11 +1,11 @@
-# PythonBuddy 🖊️ 🐍
+# <a href="http://pythonbuddy.com">PythonBuddy</a> 🖊️ 🐍
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](http://paypal.me/Ethan302)
 <br>
 Online Python 3.6 Programming with Live Pylint Syntax Checking!
 <br>
 <i>
-Demo is in Python 2.7. A Full Python sandboxing implementation for the Python 3.6 version is a WIP.
+  GIF below is in Python 2.7. <b>Demo: http://pythonbuddy.com </b>
 </i>
 <br>
 ![](gifs/pybuddy.gif)
