@@ -82,8 +82,7 @@ This is still in alpha stage so there might be some bugs. If you want to impleme
 
 1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
 2. Security
- 1. To create a much more secure Python Environment, consider using RestrictedPython: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/tree/restrictedpython
- 2. For more security but enough flexibility, you could restrict the temp.py python file without read/write permissions via these instuctions: http://stackoverflow.com/questions/186202/what-is-the-best-way-to-open-a-file-for-exclusive-access-in-python
+ 1. To create a much more secure Python Environment, consider using my Docker + Node.js implementation: https://github.com/ethanchewy/PythonBuddy#secure-sandboxed-version-using-docker
 3. For versions that used Python 2 or to see older versions, check: https://github.com/ethanchewy/PythonBuddy/releases
 
 ### Unit Tests
@@ -98,7 +97,9 @@ This is still in alpha stage so there might be some bugs. If you want to impleme
 
 ### FAQ:
 Why did you make this? <br>
-I made this so that MOOCs like edX or codecademy could easily embed and use this on their courses so students wouldn't have to go through the frustrations of setting up a Python environment and jump right into Python programming with the support of live syntax checking & highlighting.(Programming MOOCs often have a high attrition rate due to the difficulties of setting up an environment). Also, professors and teachers could easily set up a server and allow students to quickly test out their code with PythonBuddy online.
+In 2014, I was a Community TA at MIT edX 6.00.1x course where I helped teach over 1000 students. The year after I started researching under Prof. Eni Mustafaraj. She had a data set from that course and we saw a high attrition rate of students within the first 2 weeks. After digging through the curriculumn and data, I realized that the students left because of difficulties setting up their Python environment and complex error messages that they couldn't solve when running their code (ex: some students had path issues).  
+<br>
+So, I created PythonBuddy to address this issue so that students wouldn't have to go through the frustrations of setting up a Python environment and running into seemingly "random" bugs. PythonBuddy allows users to jump right into Python programming with the support of live syntax checking & highlighting. Also, professors and teachers could easily set up a server and allow students to quickly test out their code with PythonBuddy online.
 
 Has anyone created anything like this before? <br>
 There has never been a live syntax checker for python online. Similar projects that are not "live" are http://pep8online.com/ and http://antares.sip.ucm.es/cesar/pylint/
@@ -113,10 +114,14 @@ I'm currently working on this over here (for edx specifically): https://github.c
 ```
 
 I want the code to actually compile and run in a certain way?<br>
-If you want to actually execute the python safely look at my Restricted Python branch: https://github.com/ethanchewy/PythonBuddy/tree/restrictedpython. If you want to run the code more quickly, check out the testing branch which uses Python 3 but may have some bugs: https://github.com/ethanchewy/PythonBuddy/tree/testing.
+To run PythonBuddy securely, you can check out my implementation of PythonBuddy with Docker and Node.js: https://github.com/ethanchewy/PythonBuddy#secure-sandboxed-version-using-docker. Basically, it dockerizes each user session (similar to creating a virtual machine for each user) and destroys it if it uses too much memory or runs malicious code. 
+<br>
+If you want to actually execute the python in a restricted fashion at my Restricted Python branch: https://github.com/ethanchewy/PythonBuddy/tree/restrictedpython. 
 
 How do I run my own server?
-https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki
+Regular: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki 
+<br>
+Sandboxed: https://github.com/ethanchewy/PythonBuddy/wiki/Running-Sandboxed-PythonBuddy
 
 ### Press:
 Featured on <a href = "https://twitter.com/PythonWeekly/status/839928984389451777">Python Weekly</a>, <a href ="https://twitter.com/cssauthor/status/841178825924976642">CSS Author</a>, and the <a href ="https://twitter.com/TalkPython/status/858344138420477953">Talk Python Podcast</a>
