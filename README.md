@@ -142,6 +142,9 @@ Before college, I've been able to save money from various jobs. Now that I am in
 
 My goal is to keep the demo site PythonBuddy running since more than 4,000 users use it daily. All donations will go towards PythonBuddy and any excess will be used to increase the specs of the PythonBuddy demo server. 
 
-Any donation would be greatly appreciated
+Any donation would be greatly appreciated. 
 
 <b> No donation is too small. </b> A dollar goes a long way :)
+
+### Sponsorships:
+If you are interested in sponsoring this project and getting you or your company featured in the README or demo site, feel free to contact me at 17chiue@gmail.com. PythonBuddy gets over 4000 visits every day.
