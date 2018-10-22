@@ -82,8 +82,7 @@ This is still in alpha stage so there might be some bugs. If you want to impleme
 
 1. Edit app.py to change any pylint options (like showing/hiding hints warnings)
 2. Security
- 1. To create a much more secure Python Environment, consider using RestrictedPython: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/tree/restrictedpython
- 2. For more security but enough flexibility, you could restrict the temp.py python file without read/write permissions via these instuctions: http://stackoverflow.com/questions/186202/what-is-the-best-way-to-open-a-file-for-exclusive-access-in-python
+ 1. To create a much more secure Python Environment, consider using my Docker + Node.js implementation: https://github.com/ethanchewy/PythonBuddy#secure-sandboxed-version-using-docker
 3. For versions that used Python 2 or to see older versions, check: https://github.com/ethanchewy/PythonBuddy/releases
 
 ### Unit Tests
