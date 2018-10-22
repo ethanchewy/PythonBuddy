@@ -14,6 +14,11 @@ from pylint import epylint as lint
 from subprocess import Popen, PIPE, STDOUT
 from multiprocessing import Pool, cpu_count
 
+is_linux = True
+
+if os.name == "nt":
+    is_linux = False
+
 # Configure Flask App
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -163,13 +168,13 @@ def process_error(error):
 
     # Detect OS
     line_num = None
-    if os.name == "nt":
-        line_num = error.split(":")[2]
-    else:
+    if is_linux:
         try:
             line_num = error.split(":")[1]
         except Exception as e:
             print(os.name + " not compatible: " + e)
+    else:
+        line_num = error.split(":")[2]
 
     # list_words.pop(0)
     error_yet = False
