@@ -158,7 +158,11 @@ def process_error(error):
     if error.find("Your code has been rated at") > -1:
         return None
 
-    line_num = error.split(":")[1]
+    # Detect OS
+    if os.name == "nt":
+        line_num = error.split(":")[2]
+    else:
+        line_num = error.split(":")[1]
 
     # list_words.pop(0)
     error_yet = False
