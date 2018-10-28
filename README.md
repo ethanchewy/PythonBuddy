@@ -5,10 +5,10 @@
 Online Python 3.6 Programming with Live Pylint Syntax Checking!
 <br>
 <i>
-  GIF below is in Python 2.7. <b>Demo: http://pythonbuddy.com </b>
+  <b>Demo: http://pythonbuddy.com </b>
 </i>
 <br>
-![](gifs/pybuddy.gif)
+![](gifs/demo.gif)
 
 ### Usage
 1) Fetch from repo:
@@ -49,7 +49,7 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   </ul>
 </li>
 
-![](gifs/pybuddy2.gif)
+![](gifs/demo2.gif)
 
 <br>
 <li>Python Execution
@@ -59,21 +59,21 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   </ul>
 </li>
 
-![](gifs/pybuddy3.gif)
+![](gifs/demo3.gif)
 
 <br>
 <li>Live Error Table with Additional Help Suggestions</li>
 
-![](gifs/pybuddy4.gif)
+![](gifs/demo4.gif)
 
 <br>
 
 ### Secure (Sandboxed) Version using Docker
-Please check out [PythonBuddySandboxed](https://github.com/ethanchewy/PythonBuddySandboxed) for a fully working web implementation which uses a dockerized version of PythonBuddy called [PythonBuddySandbox](https://github.com/christophetd/docker-python-sandbox). 
+Please check out [PythonBuddySandboxed](https://github.com/ethanchewy/PythonBuddySandboxed) for a fully working web implementation which uses a dockerized version of PythonBuddy called [PythonBuddySandbox](https://github.com/christophetd/docker-python-sandbox).
 
 This builds off of christophetd's [docker-python-sandbox](https://github.com/christophetd/docker-python-sandbox) and just modifies it so that it runs pylint in the background and processes the pylint messages on the client side.
 
-To see how he implements it on the web side, please check out [https://github.com/christophetd/code-execution-api-demo](https://github.com/christophetd/code-execution-api-demo) 
+To see how he implements it on the web side, please check out [https://github.com/christophetd/code-execution-api-demo](https://github.com/christophetd/code-execution-api-demo)
 
 This is still in alpha stage so there might be some bugs. If you want to implement this please check the 4 links above since documentation is a WIP.
 
@@ -114,12 +114,12 @@ I'm currently working on this over here (for edx specifically): https://github.c
 ```
 
 I want the code to actually compile and run in a certain way?<br>
-To run PythonBuddy securely, you can check out my implementation of PythonBuddy with Docker and Node.js: https://github.com/ethanchewy/PythonBuddy#secure-sandboxed-version-using-docker. Basically, it dockerizes each user session (similar to creating a virtual machine for each user) and destroys it if it uses too much memory or runs malicious code. 
+To run PythonBuddy securely, you can check out my implementation of PythonBuddy with Docker and Node.js: https://github.com/ethanchewy/PythonBuddy#secure-sandboxed-version-using-docker. Basically, it dockerizes each user session (similar to creating a virtual machine for each user) and destroys it if it uses too much memory or runs malicious code.
 <br>
-If you want to actually execute the python in a restricted fashion at my Restricted Python branch: https://github.com/ethanchewy/PythonBuddy/tree/restrictedpython. 
+If you want to actually execute the python in a restricted fashion at my Restricted Python branch: https://github.com/ethanchewy/PythonBuddy/tree/restrictedpython.
 
 How do I run my own server?
-Regular: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki 
+Regular: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki
 <br>
 Sandboxed: https://github.com/ethanchewy/PythonBuddy/wiki/Running-Sandboxed-PythonBuddy
 
@@ -132,17 +132,17 @@ This was made by Ethan Chiu as a research project under the guidance of Wellesle
 ### Donations:
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](http://paypal.me/Ethan302)
 
-I started working on this in 2016 after seeing no one had addressed the issue of reducing the high attrition rate of beginning Python programmers due to the difficulties of setting up their programming environment. 
+I started working on this in 2016 after seeing no one had addressed the issue of reducing the high attrition rate of beginning Python programmers due to the difficulties of setting up their programming environment.
 
-So, ever since then, I've always been trying to improve PythonBuddy such as security and scalabitliy. Thus, I have dedicated as much as my free time into this project. 
+So, ever since then, I've always been trying to improve PythonBuddy such as security and scalabitliy. Thus, I have dedicated as much as my free time into this project.
 
-Since 2016, it's cost more than $250 per year to run and deploy the demo site excluding development costs. 
+Since 2016, it's cost more than $250 per year to run and deploy the demo site excluding development costs.
 
-Before college, I've been able to save money from various jobs. Now that I am in college, I have to pay a hefty tuition, housing, food, etc so it's much harder to sustain PythonBuddy even with a part-time job. 
+Before college, I've been able to save money from various jobs. Now that I am in college, I have to pay a hefty tuition, housing, food, etc so it's much harder to sustain PythonBuddy even with a part-time job.
 
-My goal is to keep the demo site PythonBuddy running since more than 4,000 users use it daily. All donations will go towards PythonBuddy and any excess will be used to increase the specs of the PythonBuddy demo server. 
+My goal is to keep the demo site PythonBuddy running since more than 4,000 users use it daily. All donations will go towards PythonBuddy and any excess will be used to increase the specs of the PythonBuddy demo server.
 
-Any donation would be greatly appreciated. 
+Any donation would be greatly appreciated.
 
 <b> No donation is too small. </b> A dollar goes a long way :)
 
