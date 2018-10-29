@@ -35,7 +35,11 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   ```
   export FLASK_APP=app.py
   ```
-6) Run flask app:
+6) Change to app folder
+  ```
+  cd PythonBuddy
+  ```
+7) Run flask app:
   ```
   flask run
   ```
@@ -86,6 +90,10 @@ This is still in alpha stage so there might be some bugs. If you want to impleme
 3. For versions that used Python 2 or to see older versions, check: https://github.com/ethanchewy/PythonBuddy/releases
 
 ### Unit Tests
+To run tests, run this at the root directory:
+```
+python -m tests.test_linter
+```
 
 ### Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform

@@ -215,6 +215,7 @@ def process_error(error):
         i += 1
 
     error_info = pylint_dict_final[error_code]
+
     return {
         "code": error_code,
         "error": error_string,
