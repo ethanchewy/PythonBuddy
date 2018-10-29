@@ -142,6 +142,8 @@ def evaluate_pylint(text):
 
     formatted_dict = format_errors(pylint_stdout.getvalue())
 
+    print(formatted_dict)
+
     return formatted_dict
 
 def process_error(error):
@@ -243,12 +245,14 @@ def format_errors(pylint_text):
     finally:
         pool.close()
         pool.join()
+        print(pylint_dict)
         return pylint_dict
 
     # count = 0
     # for error in errors_list:
     #     pylint_dict[count]=process_error(error)
     #     count +=1
+    print(pylint_dict)
     return pylint_dict
 
 # def find_error(id):
