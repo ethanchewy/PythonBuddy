@@ -112,7 +112,7 @@ So, I created PythonBuddy to address this issue so that students wouldn't have t
 Has anyone created anything like this before? <br>
 There has never been a live syntax checker for python online. Similar projects that are not "live" are http://pep8online.com/ and http://antares.sip.ucm.es/cesar/pylint/
 
-Has can I contribute? <br>
+How can I contribute? <br>
 You can 🌟 star my repo, fork my repo, submit a pull request, and/or open issues!
 
 Where's the code for embedding it in MOOCs? <br>
