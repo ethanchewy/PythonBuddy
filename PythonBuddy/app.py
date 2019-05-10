@@ -2,14 +2,15 @@
 v2.0.0 created on 8/4/18
 Complete redesign for efficiency and scalability
 Uses Python 3 now
+
+v2.1.0 created on 5/10/19
+Improve efficiency and design
  """
 from .pylint_errors import pylint_dict_final
 from flask import Flask, render_template, request, jsonify, session
 from flask_socketio import SocketIO
 import eventlet.wsgi
-import tempfile
-import mmap
-import os
+import tempfile, mmap, os, re
 from datetime import datetime
 from pylint import epylint as lint
 from subprocess import Popen, PIPE, STDOUT
@@ -22,6 +23,7 @@ if os.name == "nt":
     is_linux = False
 
 # Configure Flask App
+# Remember to change the SECRET_KEY!
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['DEBUG'] = True
@@ -60,11 +62,8 @@ def check_code():
         For more customization, please look at Pylint's library code:
         https://github.com/PyCQA/pylint/blob/master/pylint/lint.py
     """
-    # Get textarea text from AJAX call
-    text = request.form['text']
-
-    # Session to handle multiple users at one time
-    session["code"] = text
+    # Session to handle multiple users at one time and to get textarea from AJAX call
+    session["code"] = request.form['text']
     text = session["code"]
     output = evaluate_pylint(text)
 
@@ -96,15 +95,12 @@ def run_code():
     return jsonify(output.decode('utf-8'))
 
 # Slow down if user clicks "Run" too many times
-
-
 def slow():
     session["count"] += 1
     time = datetime.now() - session["time_now"]
     if float(session["count"]) / float(time.total_seconds()) > 5:
         return True
     return False
-
 
 def evaluate_pylint(text):
     """Create temp files for pylint parsing on user code
@@ -147,10 +143,17 @@ def evaluate_pylint(text):
     if pylint_stderr.getvalue():
         raise Exception("Issue with pylint configuration")
 
-    formatted_dict = format_errors(pylint_stdout.getvalue())
+    return format_errors(pylint_stdout.getvalue())
 
-    return formatted_dict
-
+# def split_error_gen(error):
+#     """Inspired by this Python discussion: https://bugs.python.org/issue17343
+#     Uses a generator to split error by token and save some space
+#
+#         :param error: string to be split
+#         :yield: next line split by new line
+#     """
+#     for e in error.split():
+#         yield e
 
 def process_error(error):
     """Formats error message into dictionary
@@ -168,10 +171,11 @@ def process_error(error):
     # Return None if not an error or warning
     if error == " " or error is None:
         return None
+    if error.find("Your code has been rated at") > -1:
+        return None
+
     list_words = error.split()
     if len(list_words) < 3:
-        return None
-    if error.find("Your code has been rated at") > -1:
         return None
 
     # Detect OS
@@ -185,12 +189,9 @@ def process_error(error):
         line_num = error.split(":")[2]
 
     # list_words.pop(0)
-    error_yet = False
-    message_yet = False
-    first_time = True
-    i = 0
+    error_yet, message_yet, first_time = False, False, True
+    i, length = 0, len(list_words)
     # error_code=None
-    length = len(list_words)
     while i < length:
         word = list_words[i]
         if (word == "error" or word == "warning") and first_time:
@@ -219,7 +220,6 @@ def process_error(error):
         "line": line_num,
         "error_info": error_info,
     }
-
 
 def format_errors(pylint_text):
     """Format errors into parsable nested dictionary
