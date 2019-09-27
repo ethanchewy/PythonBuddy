@@ -155,4 +155,8 @@ Any donation would be greatly appreciated.
 <b> No donation is too small. </b> A dollar goes a long way :)
 
 ### Sponsorships:
+<a href="https://blog.finxter.com/coffee-break-python-workbook-pythonbuddy/" target="_blank">
+                <img src="https://blog.finxter.com/wp-content/uploads/2019/08/Cover_Coffee_Break_Workbook_v2b-670x867.png" width="250">
+            </a>
+
 If you are interested in sponsoring this project and getting you or your company featured in the README or demo site, feel free to contact me at 17chiue@gmail.com. PythonBuddy gets over 4000 visits every day.
