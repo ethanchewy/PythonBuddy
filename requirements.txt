@@ -13,7 +13,7 @@ MarkupSafe==1.0
 mccabe==0.6.1
 monotonic==1.5
 pylint==2.1.1
-python-engineio==2.2.0
+python-engineio==3.8.2.post1
 python-socketio==2.0.0
 six==1.11.0
 typed-ast==1.1.0
