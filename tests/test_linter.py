@@ -21,7 +21,3 @@ class TestProcessingFunctions(unittest.TestCase):
         self.assertEqual(process_error(test_error), {'code': 'E1120', 'error': 'no-value-for-parameter', 'message': "No value for argument 'baz' in function", 'line': '3', 'error_info': ' \r  Occurs when a function call passes too few arguments.\r'})
         self.assertEqual(process_error(None), None)
         self.assertEqual(process_error(""), None)
-
-if __name__ == '__main__':
-    # print(process_error("s"))
-    unittest.main()

@@ -17,10 +17,10 @@ from subprocess import Popen, PIPE, STDOUT
 from multiprocessing import Pool, cpu_count
 
 
-is_linux = True
-
-if os.name == "nt":
-    is_linux = False
+def is_os_linux():
+    if os.name == "nt":
+        return False
+    return True
 
 # Configure Flask App
 # Remember to change the SECRET_KEY!
@@ -180,7 +180,7 @@ def process_error(error):
 
     # Detect OS
     line_num = None
-    if is_linux:
+    if is_os_linux():
         try:
             line_num = error.split(":")[1]
         except Exception as e:
