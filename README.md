@@ -92,7 +92,7 @@ This is still in alpha stage so there might be some bugs. If you want to impleme
 ### Unit Tests
 To run tests, run this at the root directory:
 ```
-python -m tests.test_linter
+pytest
 ```
 
 ### Future Goals:

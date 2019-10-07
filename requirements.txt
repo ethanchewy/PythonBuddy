@@ -19,3 +19,4 @@ six==1.11.0
 typed-ast==1.1.0
 Werkzeug==0.15.3
 wrapt==1.10.11
+pytest==5.2.1
