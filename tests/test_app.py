@@ -14,16 +14,12 @@ class TestIndexPage(unittest.TestCase):
         self.assertEqual(index_page.status, '200 OK')
         self.assertTrue(b'Python Linter Online' in index_page.data)
 
-    @patch('datetime.datetime')
-    def test_index_session(self, datetime_mock):
-        current_time = datetime(2019, 10, 7, 13, 46, 33, 824712)
-        datetime_mock.now.return_value = current_time
+    def test_index_session(self):
         with app.test_client() as test_client:
             index_page = test_client.get('/')
 
-            self.assertEqual(flask.session['count'], 0)
-            self.assertEqual(flask.session['time_now'].date(),
-                             current_time.date())
+            self.assertTrue('count' in flask.session)
+            self.assertTrue('time_now' in flask.session)
 
 
 class TestUtilities(unittest.TestCase):
