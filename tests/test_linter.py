@@ -22,6 +22,22 @@ class TestProcessingFunctions(unittest.TestCase):
         self.assertEqual(process_error(None), None)
         self.assertEqual(process_error(""), None)
 
+
+    def test_no_errors(self):
+        """ Asserts format_errors function returns None when
+        
+
+        """
+        test_error = "\r\n--------------------------------------------------------------------\r\n"\
+        "Your code has been rated at 10.00/10 (previous run: 9.33/10, +0.67)"
+
+        self.assertEqual(
+            format_errors(test_error),
+            None
+        )
+
+
+
 if __name__ == '__main__':
     # print(process_error("s"))
     unittest.main()
