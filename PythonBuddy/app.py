@@ -126,7 +126,7 @@ def evaluate_pylint(text):
         for t in text:
             f.write(t)
         f.flush()
-    except Exception as e:
+    except KeyError as e:
         with tempfile.NamedTemporaryFile(delete=False) as temp:
             session["file_name"] = temp.name
             for t in text:
@@ -288,11 +288,13 @@ def format_errors(pylint_text):
 #
 #     return "No information at the moment"
 
+def remove_temp_code_file():
+    os.remove(session["file_name"])
 
 @socketio.on('disconnect', namespace='/check_disconnect')
 def disconnect():
     """Remove temp file associated with current session"""
-    os.remove(session["file_name"])
+    remove_temp_code_file()
 
 
 if __name__ == "__main__":
