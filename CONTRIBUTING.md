@@ -10,6 +10,8 @@ Please note we have a code of conduct, please follow it in all your interactions
    build.
 2. Update the README.md with details of changes to the interface, this includes new environment 
    variables, exposed ports, useful file locations and container parameters..
+3. Ensure that every function has a comment/docstring above it that abides to the reStructured Text format
+4. Make sure your code is well tested.
 
 ### Our Standards
 
