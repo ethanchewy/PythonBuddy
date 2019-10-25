@@ -2,7 +2,13 @@ language: python
 python:
   - "3.6"
 # command to install dependencies
-install: "pip install -r requirements.txt"
+install: 
+  - "pip install -r requirements.txt"
+  - pip install coverage
+  - pip install coveralls
 # command to run tests
 script:
   - pytest
+  - coverage run --source=PythonBuddy -m unittest tests/test_linter.py
+  - coverage report -m 
+  - coveralls
