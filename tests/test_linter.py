@@ -22,7 +22,6 @@ class TestProcessingFunctions(unittest.TestCase):
         self.assertEqual(process_error(None), None)
         self.assertEqual(process_error(""), None)
 
-
     def test_no_errors(self):
         """ Asserts format_errors function returns None when
         
@@ -36,8 +35,5 @@ class TestProcessingFunctions(unittest.TestCase):
             None
         )
 
-
-
 if __name__ == '__main__':
-    # print(process_error("s"))
     unittest.main()

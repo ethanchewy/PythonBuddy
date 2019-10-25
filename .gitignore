@@ -2,3 +2,6 @@ venv
 .DS_STORE
 *.pyc
 .vscode
+assets/
+htmlcov/
+.coverage

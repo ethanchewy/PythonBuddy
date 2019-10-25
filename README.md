@@ -92,8 +92,13 @@ This is still in alpha stage so there might be some bugs. If you want to impleme
 ### Unit Tests
 To run tests, run this at the root directory:
 ```
-python -m tests.test_linter
+pytest
 ```
+For coverage run the following command in the root directory:
+```
+pytest --cov-report html --cov=PythonBuddy tests/
+```
+
 
 ### Future Goals:
 - Make easily embeddable for MOOCs like edX and other education platform
