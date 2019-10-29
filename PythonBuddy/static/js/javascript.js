@@ -100,7 +100,7 @@ $(document).ready(function() {
   var editor = CodeMirror.fromTextArea(document.getElementById("txt"), {
     mode: {
       name: "python",
-      version: 2,
+      version: 3,
       singleLineStringErrors: false
     },
     lineNumbers: true,
