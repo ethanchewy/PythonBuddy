@@ -143,7 +143,9 @@ Featured on <a href = "https://twitter.com/PythonWeekly/status/83992898438945177
 This was made by Ethan Chiu as a research project under the guidance of Wellesley College professor Eni Mustafaraj.
 
 ### Donations:
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](http://paypal.me/Ethan302)
+Github Sponsors: https://github.com/sponsors/ethanchewy
+Github will match all donations for the first year!
+Direct PayPal: [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](http://paypal.me/Ethan302)
 
 I started working on this in 2016 after seeing no one had addressed the issue of reducing the high attrition rate of beginning Python programmers due to the difficulties of setting up their programming environment.
 
