@@ -163,6 +163,9 @@ Any donation would be greatly appreciated.
 <b> No donation is too small. </b> A dollar goes a long way :)
 
 ### Sponsorships:
+<a href="https://blog.finxter.com/subscribe/">
+<img src="https://media.giphy.com/media/dt15WCaTtSjMHQwSIa/giphy.gif" width="250"></img>
+</a>
 <a href="https://www.digistore24.com/redir/275661/ethanchewy/CAMPAIGNKEY" target="_blank">
                 <img src="https://blog.finxter.com/wp-content/uploads/2019/08/Cover_Coffee_Break_Workbook_v2b-670x867.png" width="250">
             </a>
