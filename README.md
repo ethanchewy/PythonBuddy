@@ -23,7 +23,7 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   ```
   python3 -m venv venv
   ```
-3) Activate vitrual environment:
+3) Activate virtual environment:
   ```
   source venv/bin/activate
   ```
