@@ -152,7 +152,7 @@ I started working on this in 2016 after seeing no one had addressed the issue of
 
 So, ever since then, I've always been trying to improve PythonBuddy such as security and scalabitliy. Thus, I have dedicated as much as my free time into this project.
 
-Since 2016, it's cost more than $250 per year to run and deploy the demo site excluding development costs.
+Since 2016, it's cost more than $360 per year to run and deploy the demo site excluding development costs.
 
 Before college, I've been able to save money from various jobs. Now that I am in college, I have to pay a hefty tuition, housing, food, etc so it's much harder to sustain PythonBuddy even with a part-time job.
 
@@ -163,11 +163,6 @@ Any donation would be greatly appreciated.
 <b> No donation is too small. </b> A dollar goes a long way :)
 
 ### Sponsorships:
-<a href="https://blog.finxter.com/subscribe/">
-<img src="https://media.giphy.com/media/dt15WCaTtSjMHQwSIa/giphy.gif" width="250"></img>
-</a>
-<a href="https://www.digistore24.com/redir/275661/ethanchewy/CAMPAIGNKEY" target="_blank">
-                <img src="https://blog.finxter.com/wp-content/uploads/2019/08/Cover_Coffee_Break_Workbook_v2b-670x867.png" width="250">
-            </a>
+Ethan Chiu (~$30 per month for server costs)
 
 If you are interested in sponsoring this project and getting you or your company featured in the README or demo site, feel free to contact me at 17chiue@gmail.com. PythonBuddy gets over 4000 visits every day.
