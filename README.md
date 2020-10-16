@@ -137,7 +137,7 @@ Regular: https://github.com/ethanchewy/OnlinePythonLinterSyntaxChecker/wiki
 Sandboxed: https://github.com/ethanchewy/PythonBuddy/wiki/Running-Sandboxed-PythonBuddy
 
 ### Press:
-Featured on <a href = "https://twitter.com/PythonWeekly/status/839928984389451777">Python Weekly</a>, <a href ="https://twitter.com/cssauthor/status/841178825924976642">CSS Author</a>, and the <a href ="https://twitter.com/TalkPython/status/858344138420477953">Talk Python Podcast</a>
+Featured on <a href="https://twitter.com/FlaskCon/status/1280753108818096128">FlaskCon 2020</a>, <a href = "https://twitter.com/PythonWeekly/status/839928984389451777">Python Weekly</a>, <a href ="https://twitter.com/cssauthor/status/841178825924976642">CSS Author</a>, and the <a href ="https://twitter.com/TalkPython/status/858344138420477953">Talk Python Podcast</a>
 
 ### Credits:
 This was made by Ethan Chiu as a research project under the guidance of Wellesley College professor Eni Mustafaraj.
