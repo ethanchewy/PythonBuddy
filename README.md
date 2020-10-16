@@ -141,3 +141,7 @@ Featured on <a href="https://twitter.com/FlaskCon/status/1280753108818096128">Fl
 
 ### Credits:
 This was made by Ethan Chiu as a research project under the guidance of Wellesley College professor Eni Mustafaraj.
+
+### Other:
+As of Octobe 2020, PythonBuddy.com will no longer be a demo server for this open-source project due to the increasing costs of hosting it for 80,000+ people monthly. Instead, this URL will redirect back to this GitHub repo.
+
