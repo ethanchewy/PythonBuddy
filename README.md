@@ -3,6 +3,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](http://paypal.me/Ethan302)
 <br>
 Online Python 3.6 Programming with Live Pylint Syntax Checking!
+<br>
 ![](gifs/demo.gif)
 
 ### Usage
