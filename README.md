@@ -11,7 +11,7 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   ```
   git clone https://github.com/ethanchewy/PythonBuddy.git
   ```
-2) Change to directory
+2) Change to PythonBuddy directory
   ```
   cd PythonBuddy
   ```
@@ -27,13 +27,13 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   ```
   pip install -r requirements.txt
   ```
-5) Set FLASK_APP variable:
-  ```
-  export FLASK_APP=app.py
-  ```
-6) Change to app folder
+5) Change to the PythonBuddy application folder. You should now be in `PythonBuddy/PythonBuddy/`.
   ```
   cd PythonBuddy
+  ```
+6) Set FLASK_APP variable:
+  ```
+  export FLASK_APP=app.py
   ```
 7) Run flask app:
   ```
