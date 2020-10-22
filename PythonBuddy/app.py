@@ -71,8 +71,6 @@ def check_code():
     return jsonify(output)
 
 # Run python in secure system
-
-
 @app.route('/run_code', methods=['POST'])
 def run_code():
     """Run python 3 code
@@ -87,6 +85,9 @@ def run_code():
     session["time_now"] = datetime.now()
 
     output = None
+    if not "file_name" in session:
+        with tempfile.NamedTemporaryFile(delete=False) as temp:
+            session["file_name"] = temp.name
     cmd = 'python ' + session["file_name"]
     p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE,
               stderr=STDOUT, close_fds=True)
@@ -120,13 +121,12 @@ def evaluate_pylint(text):
     """
     # Open temp file for specific session.
     # IF it doesn't exist (aka the key doesn't exist), create one
-    try:
-        session["file_name"]
+    if "file_name" in session:
         f = open(session["file_name"], "w")
         for t in text:
             f.write(t)
         f.flush()
-    except KeyError as e:
+    else:
         with tempfile.NamedTemporaryFile(delete=False) as temp:
             session["file_name"] = temp.name
             for t in text:
