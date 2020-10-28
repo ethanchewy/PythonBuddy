@@ -23,11 +23,11 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   ```
   source venv/bin/activate
   ```
-4) Enusre that your virtualenv uses Python 3.6.9 via this command:
+4) Enusre that your virtualenv uses Python 3.7.6 via this command:
   ```
   python --version
   ```
-  If you don't use Python 3.6.9, some Python libraries that PythonBuddy relies on may not work. Please refer to this documentation for figuring out how to create a specific version of Python via vitualenv via this StackOverflow [post](https://stackoverflow.com/a/39713544).
+  If you don't use Python Python 3.7.6, some Python libraries that PythonBuddy relies on **may not work**. Please refer to this documentation for figuring out how to create a specific version of Python via vitualenv via this StackOverflow [post](https://stackoverflow.com/a/39713544).
   
 5) Pipe requirements to venv folder:
   ```
