@@ -23,19 +23,25 @@ Online Python 3.6 Programming with Live Pylint Syntax Checking!
   ```
   source venv/bin/activate
   ```
-4) Pipe requirements to venv folder:
+4) Enusre that your virtualenv uses Python 3.6.9 via this command:
+  ```
+  python --version
+  ```
+  If you don't use Python 3.6.9, some Python libraries that PythonBuddy relies on may not work. Please refer to this documentation for figuring out how to create a specific version of Python via vitualenv via this StackOverflow [post](https://stackoverflow.com/a/39713544).
+  
+5) Pipe requirements to venv folder:
   ```
   pip install -r requirements.txt
   ```
-5) Change to the PythonBuddy application folder. You should now be in `PythonBuddy/PythonBuddy/`.
+6) Change to the PythonBuddy application folder. You should now be in `PythonBuddy/PythonBuddy/`.
   ```
   cd PythonBuddy
   ```
-6) Set FLASK_APP variable:
+7) Set FLASK_APP variable:
   ```
   export FLASK_APP=app.py
   ```
-7) Run flask app:
+8) Run flask app:
   ```
   flask run
   ```
