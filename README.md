@@ -2,7 +2,7 @@
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](http://paypal.me/Ethan302)
 <br>
-Online Python 3.6 Programming with Live Pylint Syntax Checking!
+Online Python 3 Programming with Live Pylint Syntax Checking!
 <br>
 ![](gifs/demo.gif)
 
