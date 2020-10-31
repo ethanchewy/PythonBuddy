@@ -147,7 +147,7 @@ This was made by Ethan Chiu as a research project under the guidance of Wellesle
 ### Other:
 As of October 2020, PythonBuddy.com will no longer be a demo server for this open-source project due to the increasing costs of hosting it for 80,000+ people monthly. Instead, this URL will redirect back to this GitHub repo.
 
-### What can I do help support PythonBuddy?
+### How can I support PythonBuddy?
 If you enojyed using this open-source project, please consider donating whatever you can to these organizations that address problems I'm passionate about:
 - https://www.nami.org/Home
 - https://www.cradlestocrayons.org/
