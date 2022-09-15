@@ -27,7 +27,7 @@ Online Python 3 Programming with Live Pylint Syntax Checking!
   ```
   python --version
   ```
-  If you don't use Python Python 3.7.6, some Python libraries that PythonBuddy relies on **may not work**. Please refer to this documentation for figuring out how to create a specific version of Python via vitualenv via this StackOverflow [post](https://stackoverflow.com/a/39713544).
+  If you don't use Python Python 3.7.6, some Python libraries that PythonBuddy relies on **may not work**. Please refer to this documentation for figuring out how to create a specific version of Python via virtualenv via this StackOverflow [post](https://stackoverflow.com/a/39713544).
   
 5) Pipe requirements to venv folder:
   ```
@@ -112,7 +112,7 @@ pytest --cov-report html --cov=PythonBuddy tests/
 
 ### FAQ:
 Why did you make this? <br>
-In 2014, I was a Community TA at MIT edX 6.00.1x course where I helped teach over 1000 students. The year after I started researching under Prof. Eni Mustafaraj. She had a data set from that course and we saw a high attrition rate of students within the first 2 weeks. After digging through the curriculumn and data, I realized that the students left because of difficulties setting up their Python environment and complex error messages that they couldn't solve when running their code (ex: some students had path issues).  
+In 2014, I was a Community TA at MIT edX 6.00.1x course where I helped teach over 1000 students. The year after I started researching under Prof. Eni Mustafaraj. She had a data set from that course and we saw a high attrition rate of students within the first 2 weeks. After digging through the curriculum and data, I realized that the students left because of difficulties setting up their Python environment and complex error messages that they couldn't solve when running their code (ex: some students had path issues).  
 <br>
 So, I created PythonBuddy to address this issue so that students wouldn't have to go through the frustrations of setting up a Python environment and running into seemingly "random" bugs. PythonBuddy allows users to jump right into Python programming with the support of live syntax checking & highlighting. Also, professors and teachers could easily set up a server and allow students to quickly test out their code with PythonBuddy online.
 
@@ -148,7 +148,7 @@ This was made by Ethan Chiu as a research project under the guidance of Wellesle
 As of October 2020, PythonBuddy.com will no longer be a demo server for this open-source project due to the increasing costs of hosting it for 80,000+ people monthly. Instead, this URL will redirect back to this GitHub repo.
 
 ### How can I support PythonBuddy?
-If you enojyed using this open-source project, please consider donating whatever you can to these organizations that address problems I'm passionate about:
+If you enjoyed using this open-source project, please consider donating whatever you can to these organizations that address problems I'm passionate about:
 - https://www.nami.org/Home
 - https://www.cradlestocrayons.org/
 - https://codenation.org/

@@ -17,7 +17,7 @@ CodeMirror.remoteValidator = function(cm, updateLinting, options) {
 		{
 			var error = error_list[i];
 
-			// Null check to make sure eror message is not empty
+			// Null check to make sure error message is not empty
 			if (error.line_no != null && error.message != null && error.severity != null) {
 				var start_line = error.line_no;
 
