@@ -57,9 +57,11 @@ $(document).ready(function() {
           if (severity == "E" || severity == "e") {
             severity = "error";
             severity_color = "red";
+            text_color = "white";
           } else if (severity == "W" || severity == "w") {
             severity = "warning";
             severity_color = "yellow";
+            text_color = "black";
           }
           //Push to error list
           error_list.push({
@@ -75,7 +77,7 @@ $(document).ready(function() {
           // var moreinfo = getHelp(id);
           //Append all data to table
           $('#errorslist').append("<tr>" + "<td>" + number + "</td>" +
-            "<td style=\"background-color:" + severity_color + ";\"" +
+            "<td style=\"background-color:" + severity_color + ";color:"+text_color+";\"" +
             ">" + severity + "</td>" +
             "<td>" + message + "</td>" +
             "<td>" + moreinfo + "</td>" +
