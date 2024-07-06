@@ -147,12 +147,6 @@ This was made by Ethan Chiu as a research project under the guidance of Wellesle
 ### Other:
 As of October 2020, PythonBuddy.com will no longer be a demo server for this open-source project due to the increasing costs of hosting it for 80,000+ people monthly. Instead, this URL will redirect back to this GitHub repo.
 
-### How can I support PythonBuddy?
-If you enjoyed using this open-source project, please consider donating whatever you can to these organizations that address problems I'm passionate about:
-- https://www.nami.org/Home
-- https://www.cradlestocrayons.org/
-- https://codenation.org/
-
 If you don't have the means to donate to the above, consider checking out some of these free action items and information:
 - https://blacklivesmatters.carrd.co/#petitions
 - https://news.berkeley.edu/story_jump/end-of-affirmative-action-at-uc-hurt-black-latinx-students-study-finds/
