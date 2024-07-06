@@ -1,6 +1,4 @@
 # <a href="http://pythonbuddy.com">PythonBuddy</a> 🖊️ 🐍
-[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://travis-ci.org/ethanchewy/OnlinePythonLinterSyntaxChecker)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](http://paypal.me/Ethan302)
 <br>
 Online Python 3 Programming with Live Pylint Syntax Checking!
 <br>
@@ -146,10 +144,3 @@ This was made by Ethan Chiu as a research project under the guidance of Wellesle
 
 ### Other:
 As of October 2020, PythonBuddy.com will no longer be a demo server for this open-source project due to the increasing costs of hosting it for 80,000+ people monthly. Instead, this URL will redirect back to this GitHub repo.
-
-If you don't have the means to donate to the above, consider checking out some of these free action items and information:
-- https://blacklivesmatters.carrd.co/#petitions
-- https://news.berkeley.edu/story_jump/end-of-affirmative-action-at-uc-hurt-black-latinx-students-study-finds/
-- https://www.vote.org/
-- https://www.bentley.edu/news/confronting-anti-asian-racism-age-coronavirus
-- https://en.wikipedia.org/wiki/Bamboo_ceiling
