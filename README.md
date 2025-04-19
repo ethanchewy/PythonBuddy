@@ -6,6 +6,23 @@ Online Python 3 Programming with Live Pylint Syntax Checking!
 ![](gifs/demo.gif)
 
 ### Usage
+
+**GitHub Codespaces**
+
+The quickest way to use PythonBuddy is to launch your own GitHub Codespace!
+
+1) From the GitHub repo, click the green "Code" button and select "Codespaces".
+2) Create a new Codespace or select a previous one you've already created.
+3) Navigate to the new tab created for your Codespace.
+4) In terminal, run `bash ./setup.sh`
+5) Click "Open in Browser" in the bottom right corner after the setup is complete.
+  * The website may take a while to load or error at first while GitHub sets up the preview environment. In this case, reload the website.
+6) Remember to **stop your workspace** after you're done using it.
+
+**Local Use**
+
+Due to Codespace's monthly limits, it's recommended to run PythonBuddy locally if used often.
+
 1) Fetch from repo:
   ```
   git clone https://github.com/ethanchewy/PythonBuddy.git
